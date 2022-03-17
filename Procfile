@@ -1,0 +1,1 @@
+web: cd app && python -m uvicorn main:app
