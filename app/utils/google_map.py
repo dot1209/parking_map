@@ -63,7 +63,11 @@ if __name__ == "__main__":
 
                         if building not in distance_log.keys():
                             distance_log[building] = {}
-                        info = {"distance": distance.text, "walking_time": walking_time.text}
+                        info = {
+                            "distance": distance.text,
+                            "walking_time": walking_time.text,
+                            "zone": parking_zone
+                        }
                         distance_log[building][parking_name] = info
                         print(f"{building} -> {parking_name}: {info}")   
                         pbar.update(1)

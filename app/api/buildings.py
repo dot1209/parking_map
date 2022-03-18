@@ -1,32 +1,26 @@
 # -*- coding:utf-8 -*-
 import json
 
-def convert2m(s: str):
+def convert2m(s: str) -> int:
     d = s.split(" ")
     if d[1] == "公里":
-        return int(d[0]) * 1000
+        return int(float(d[0]) * 1000)
     else:
-        return d[0]
+        return int(d[0])
 
-def convert2km(s: str):
-    d = s.split(" ")
-    if int(d[0]) >= 1000:
-        d[0] = round(d[0] / 1000, 1)
-        return str(d[0]) + " 公里"
-    else:
-        return str(d[0]) + " 公尺"
-
-def get_nearest_parking(building_name: str):
+def get_nearest_parking(building_name: str, topn: int):
     result = []
+    n = 0
     with open("data/distance.json", "r", encoding="utf-8") as f:
         distance_log = json.load(f)
-
     sorted_distance = dict(sorted(distance_log[building_name].items(), key=lambda item: convert2m(item[1]["distance"])))
-    for k, v in sorted_distance[building_name].items():
+    for k, v in sorted_distance.items():
         result.append({k: v})
+        n += 1
+        if n == topn:
+            break
     
-    print(result)
     return result
 
 if __name__ == "__main__":
-    get_nearest_parking("醫護大樓")
+    print(get_nearest_parking("醫護大樓", topn=3))
