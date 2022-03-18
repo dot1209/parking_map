@@ -5,7 +5,7 @@ from typing import Dict
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -32,33 +32,23 @@ class Item(BaseModel):
 
 @app.get("/")
 def read_root():
-    with open(os.path.join(base_path, "templates", "Map.html"), "r", encoding="utf8") as f:
-        html = f.read()
-    return HTMLResponse(html)
+    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
 
 @app.get("/Map")
 def read_map():
-    with open(os.path.join(base_path, "templates", "Map.html"), "r", encoding="utf8") as f:
-        html = f.read()
-    return HTMLResponse(html)
+    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
 
 @app.get("/Info")
 def read_info():
-    with open(os.path.join(base_path, "templates", "Info.html"), "r", encoding="utf8") as f:
-        html = f.read()
-    return HTMLResponse(html)
+    return FileResponse(os.path.join(base_path, "templates", "Info.html"))
 
 @app.get("/Apply")
 def read_apply():
-    with open(os.path.join(base_path, "templates", "Apply.html"), "r", encoding="utf8") as f:
-        html = f.read()
-    return HTMLResponse(html)
+    return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
 
 @app.get("/apply/chart")
 def read_apply_chart():
-    with open(os.path.join(base_path, "templates", "apply", "chart.html"), "r", encoding="utf8") as f:
-        html = f.read()
-    return HTMLResponse(html)
+    return FileResponse(os.path.join(base_path, "templates", "apply", "chart.html"))
 
 @app.get("/apply/license")
 def read_apply_license():
