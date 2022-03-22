@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -10,130 +11,111 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
     <!-- Custom styles for this template -->
     <link href="../static/css/carousel.css" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">成大校園停車APP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <!-- class="navbar-nav me-auto mb-2 mb-md-0" -->
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Map">校區地圖</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Info">相關資訊</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Apply">停車證申請</a>
-                </li>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+        <div class="d-flex justify-content-center container-fluid shadow">
+            <div class="navbar-top">
+                <a href="Map" class="title">
+                    <img src="../assets/Group 39.png" class="logo-small">
+                    <span>
+                        成大停車場查詢
+                    </span>
+                </a>
             </div>
-          </div>
-        </nav>
+        </div>
     </header>
 
-      <!-- JavaScript Bundle with Popper -->  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-</script>
+    <div class="d-flex container-fluid map-container justify-content-center aling-content-center">
+        <img src="../assets/全校區.png" usemap="#ncku-map" alt="replaced word"
+            class="map img-fluid">
+        <!-- coordinate 從左上角的左下開始逆時鐘放 -->
+        <map name="ncku-map">
+            <area shape="poly"
+                coords="213.224, 105.759, 191.644, 248.826, 207.969, 269.389, 434.410, 287.334, 452.701, 269.389, 453.771, 129.093, 437.628, 111.240, 232.766, 90.582"
+                href="#" alt="力行校區">
+            <area shape="poly"
+                coords="478.827, 136.027, 479.222, 272.032, 496.107, 288.868, 704.386, 288.868, 721.271, 271.983, 721.271, 161.793, 706.459, 145.036, 497.785, 119.22"
+                href="#" alt="成杏校區">
+            <area shape="poly"
+                coords="745.271, 168.327, 744, 276, 757, 288, 881, 288, 893, 275, 893.271, 180.129, 879.083, 164.430, 762.641, 152.629"
+                href="#" alt="敬業校區">
+            <area shape="poly"
+                coords="184.518, 316.018, 134.787, 598.391, 158.478, 630.331, 414.874, 661.262, 445.532, 634.764, 453.105, 335.204, 427.481, 307.182, 213.243, 293.438"
+                href="#" alt="光復校區">
+            <area shape="poly"
+                coords="471.771, 332.118, 471.771, 648.618, 492.021, 668.868, 696.775, 668.868, 717.023, 648.873, 721.013, 332.373, 700.764, 311.868, 492.021, 311.868"
+                href="#" alt="成功校區">
+            <area shape="poly"
+                coords="745.271, 333.118, 745.271, 647.618, 766.521, 668.868, 872.229, 668.868, 893.478, 647.826, 896.561, 333.326, 875.312, 311.868, 766.521, 311.868"
+                href="#" alt="自強校區上">
+            <area shape="poly"
+                coords="741.438, 720.201, 741.438, 810.201, 766.438, 835.201, 865.771, 835.201, 890.771, 810.201, 890.771, 720.201, 865.771, 695.201, 766.438, 695.201"
+                href="#" alt="自強校區下">
+            <area shape="poly"
+                coords="464.105, 710.451, 463.017, 909.038, 484.688, 929.201, 697.521, 929.201, 718.105, 908.618, 718.105, 710.451, 697.521, 689.868, 484.688, 689.868"
+                href="#" alt="勝利校區">
+            <area shape="poly"
+                coords="741.438, 871.785, 741.438, 910.618, 759.342, 926.535, 870.734, 955.831, 890.771, 940.457, 890.771, 871.785, 874.855, 855.868, 757.355, 855.868"
+                href="#" alt="東寧校區">
+        </map>
+    </div>
 
+    <section class="footer">
+        <div class="d-flex container-sm">
+            <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
+                <a href="Info">
+                    <img src="../assets/icon3.png" class="info-icon">
+                </a>
+                <a href="Map">
+                    <img src="../assets/icon1淺金.png" class="map-icon">
+                </a>
+                <a href="Apply">
+                    <img src="../assets/icon2.png" class="apply-icon">
+                </a>
+            </nav>
+        </div>
+    </section>
 
+    <main>
+        <!-- Awesome font -->
+        <script src="https://kit.fontawesome.com/517fa12b43.js" crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- hilightmap (jQuery) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.2/jquery.maphilight.min.js"
+            integrity="sha512-1YiTT24MNHA6DRzyu+w9F5Egc8evYlyEnzSSTD4/M7q42xEb5fSpNgn0+1CPy3evubHs3xdlh8uXgae0DOhR7Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- rwdMap (jQuery) -->
+        <script src="../static/js/rwdImageMaps.min.js"></script>
 
-  <div class="container">
-    <img src="../assets/全校區.png" usemap="#ncku-map"
-         alt="replaced word"
-         class="map img-fluid justify-content-center">
-    <!-- coordinate 從左上角的左下開始逆時鐘放 -->
-    <map name="ncku-map">
-      <area shape="poly" coords="213.224, 105.759, 191.644, 248.826, 207.969, 269.389, 434.410, 287.334, 452.701, 269.389, 453.771, 129.093, 437.628, 111.240, 232.766, 90.582"
-            href="#" alt="力行校區">
-      <area shape="poly" coords="478.827, 136.027, 479.222, 272.032, 496.107, 288.868, 704.386, 288.868, 721.271, 271.983, 721.271, 161.793, 706.459, 145.036, 497.785, 119.22"
-            href="#" alt="成杏校區">
-      <area shape="poly" coords="745.271, 168.327, 744, 276, 757, 288, 881, 288, 893, 275, 893.271, 180.129, 879.083, 164.430, 762.641, 152.629" 
-            href="#" alt="敬業校區">
-      <area shape="poly" coords="184.518, 316.018, 134.787, 598.391, 158.478, 630.331, 414.874, 661.262, 445.532, 634.764, 453.105, 335.204, 427.481, 307.182, 213.243, 293.438"
-            href="#" alt="光復校區">
-      <area shape="poly" coords="471.771, 332.118, 471.771, 648.618, 492.021, 668.868, 696.775, 668.868, 717.023, 648.873, 721.013, 332.373, 700.764, 311.868, 492.021, 311.868"
-            href="#" alt="成功校區">
-      <area shape="poly" coords="745.271, 333.118, 745.271, 647.618, 766.521, 668.868, 872.229, 668.868, 893.478, 647.826, 896.561, 333.326, 875.312, 311.868, 766.521, 311.868"
-            href="#" alt="自強校區上">
-      <area shape="poly" coords="741.438, 720.201, 741.438, 810.201, 766.438, 835.201, 865.771, 835.201, 890.771, 810.201, 890.771, 720.201, 865.771, 695.201, 766.438, 695.201"
-            href="#" alt="自強校區下">
-      <area shape="poly" coords="464.105, 710.451, 463.017, 909.038, 484.688, 929.201, 697.521, 929.201, 718.105, 908.618, 718.105, 710.451, 697.521, 689.868, 484.688, 689.868"
-            href="#" alt="勝利校區">
-      <area shape="poly" coords="741.438, 871.785, 741.438, 910.618, 759.342, 926.535, 870.734, 955.831, 890.771, 940.457, 890.771, 871.785, 874.855, 855.868, 757.355, 855.868"
-            href="#" alt="東寧校區">
-    </map>
-  </div>
- 
-  <main>
-
-    <!-- JavaScript Bundle with Popper -->  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-          crossorigin="anonymous"></script>
- <!-- hilightmap (jQuery) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.2/jquery.maphilight.min.js"
-          integrity="sha512-1YiTT24MNHA6DRzyu+w9F5Egc8evYlyEnzSSTD4/M7q42xEb5fSpNgn0+1CPy3evubHs3xdlh8uXgae0DOhR7Q=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- rwdMap (jQuery) -->
-  <script src="../static/js/rwdImageMaps.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      // $('.map').maphilight();
-      $('.map').rwdImageMaps();
-    });
-    $('area').on('click', function() {
-      alert($(this).attr('alt'));
-    });
-  </script>
-  
-  
-  
-  
-  
-  </main>
-  
-  
-      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // $('.map').maphilight();
+                $('.map').rwdImageMaps();
+            });
+            $('area').on('click', function () {
+                alert($(this).attr('alt'));
+            });
+        </script>
+    </main>
 
 </body>
+
 </html>

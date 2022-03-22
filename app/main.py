@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from api import buildings
+from api import buildings, zone
 
 app = FastAPI()
 
@@ -58,14 +58,34 @@ def read_apply_license():
 def read_apply_personal():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal.html"))
 
+@app.get("/Map")
+def read_map():
+    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
+
+@app.get("/Info")
+def read_info():
+    return FileResponse(os.path.join(base_path, "templates", "Info.html"))
+
+@app.get("/Apply")
+def read_apply():
+    return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
+
+@app.get("/apply/chart")
+def read_apply_chart():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "chart.html"))
+
+@app.get("/apply/license")
+def read_apply_license():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license.html"))
+
+@app.get("/apply/personal")
+def read_apply_personal():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal.html"))
+
 @app.get("/buildings/{building_name}")
 def read_buildings(building_name: str):
-    with open(os.path.join(base_path, "data", "distance.json"), "r", encoding="utf-8") as f:
-        distance_log = json.load(f)
+    return buildings.get_nearest_parking(building_name, 3)
 
-    n = 0
-    result = []
-    for k, v in distance_log[building_name].items():
-        result.append({k: v})
-        n += 1
-    return result
+@app.get("/zone/{building_name}")
+def read_zone(building_name: str):
+    return zone.find_zone(building_name)
