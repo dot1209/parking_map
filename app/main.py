@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from api import buildings, zone
+from api import buildings, parking, zone
 
 app = FastAPI()
 
@@ -32,7 +32,7 @@ class Item(BaseModel):
 
 @app.get("/")
 def read_root():
-    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
+    return FileResponse(os.path.join(base_path, "templates", "index.html"))
 
 @app.get("/Map")
 def read_map():
@@ -89,3 +89,7 @@ def read_buildings(building_name: str):
 @app.get("/zone/{building_name}")
 def read_zone(building_name: str):
     return zone.find_zone(building_name)
+
+@app.get("/parking/{parking_name}")
+def read_parking(parking_name: str):
+    return parking.get_nearest_parking(parking_name, 3)

@@ -21,7 +21,7 @@ if __name__ == "__main__":
     with open(os.path.join(data_path, "parking_location.json"), "r", encoding="utf8") as f:
         ncku_parking = json.load(f)
 
-    with open(os.path.join(data_path, "distance.json"), "r", encoding="utf-8") as f:
+    with open(os.path.join(data_path, "parking_distance.json"), "r", encoding="utf-8") as f:
         distance_log = json.load(f)
 
     # google map url format
@@ -38,12 +38,13 @@ if __name__ == "__main__":
                     if parking_info == {}:
                         continue
                     for parking_name, parking_coord in parking_info.items():
-                        if building in distance_log.keys():
-                            if parking_name in distance_log[building].keys():
+                        if parking_name in distance_log.keys():
+                            if building in distance_log[parking_name].keys():
                                 pbar.update(1)
                                 continue
 
-                        target_url = "https://www.google.com.tw/maps/dir/"+building+"/"+parking_coord
+                        # target_url = "https://www.google.com.tw/maps/dir/"+building+"/"+parking_coord
+                        target_url = "https://www.google.com.tw/maps/dir/"+parking_coord+"/"+building
                         driver.get(target_url)
                         sleep(3)
 
@@ -61,16 +62,16 @@ if __name__ == "__main__":
                             class_="xB1mrd-T3iPGc-iSfDt-duration gm2-subtitle-alt-1"
                         )
 
-                        if building not in distance_log.keys():
-                            distance_log[building] = {}
+                        if parking_name not in distance_log.keys():
+                            distance_log[parking_name] = {}
                         info = {
                             "distance": distance.text,
                             "walking_time": walking_time.text,
-                            "zone": parking_zone
+                            "zone": building_zone
                         }
-                        distance_log[building][parking_name] = info
-                        print(f"{building} -> {parking_name}: {info}")   
+                        distance_log[parking_name][building] = info
+                        print(f"{parking_name} -> {building}: {info}")   
                         pbar.update(1)
 
-                        with open(os.path.join(data_path, "distance.json"), "w", encoding="utf8") as f:
+                        with open(os.path.join(data_path, "distance2.json"), "w", encoding="utf8") as f:
                             json.dump(distance_log, f, ensure_ascii=False, indent=4)

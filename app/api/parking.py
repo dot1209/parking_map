@@ -8,12 +8,12 @@ def convert2m(s: str) -> int:
     else:
         return int(d[0])
 
-def get_nearest_parking(building_name: str, topn: int):
+def get_nearest_parking(parking_name: str, topn: int):
     result = []
     n = 0
-    with open("data/building_distance.json", "r", encoding="utf-8") as f:
+    with open("data/parking_distance.json", "r", encoding="utf-8") as f:
         distance_log = json.load(f)
-    sorted_distance = dict(sorted(distance_log[building_name].items(), key=lambda item: convert2m(item[1]["distance"])))
+    sorted_distance = dict(sorted(distance_log[parking_name].items(), key=lambda item: convert2m(item[1]["distance"])))
     for k, v in sorted_distance.items():
         result.append({k: v})
         n += 1
@@ -23,4 +23,4 @@ def get_nearest_parking(building_name: str, topn: int):
     return result
 
 if __name__ == "__main__":
-    print(get_nearest_parking("醫護大樓", topn=3))
+    print(get_nearest_parking("雲平地停", topn=3))
