@@ -32,7 +32,7 @@ class Item(BaseModel):
 
 @app.get("/")
 def read_root():
-    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
+    return FileResponse(os.path.join(base_path, "templates", "index.html"))
 
 @app.get("/Map")
 def read_map():
