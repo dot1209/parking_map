@@ -22,8 +22,8 @@ body {
 }
 
 @keyframes animation {
-    from {opacity: 100%;}
-    to {opacity: 0%;}
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
 
 #homepage {
@@ -32,9 +32,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     animation-name: animation;
-    animation-duration: 2s;
-    animation-delay: 1s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: animation;
+    -o-animation-name: animation;
+    animation-duration: 3s;
+    /* animation-delay: 1s; */
+    animation-iteration-count: infinite;
 }
 
 a.title {
@@ -99,6 +101,8 @@ a.title {
     border-top: 2px solid #90693E;
     border-radius: 30px;
     margin-bottom: 80px;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .input-field {
