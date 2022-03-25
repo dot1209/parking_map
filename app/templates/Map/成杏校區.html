@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>NCKU parking map</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+    <!-- Custom styles for this template -->
+    <link href="../static/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="d-flex justify-content-center container-fluid shadow">
+            <div class="pt-5 pb-4">
+                <a href="Map" class="title">
+                    <img src="../assets/Group 39.png" class="logo-small">
+                    <span>
+                        成大停車場查詢
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="d-flex flex-column container-fluid fullfill justify-content-center aling-content-center">
+        
+        <!-- subtitle -->
+        <div class="d-flex justify-content-center">
+            <p id="subtitle" class="p-2 m-4">請選擇建築物或停車場</p>
+        </div>
+        
+
+        <!-- map -->
+        <div class="my-3 d-flex justify-content-center aling-content-center">
+            <img src="../assets/成杏.png" usemap="#ncku-map" alt="replaced word"
+                class="map img-fluid">
+                <!-- coordinate 從左上角的左下開始逆時鐘放 -->
+            <map name="ncku-map">
+                <area shape="poly" coords="134.036, 132.451, 134.036, 254.338, 168.482, 254.338, 168.482, 293.175, 212.144, 293.175, 212.144, 254.338, 203.982, 150.678, 203.982, 132.451"
+                      href="#" alt="附設醫院">
+                <area shape="poly" coords="265.311, 150.678, 265.311, 254.338, 343.323, 254.338, 369.897, 188.647, 343.323, 188.647, 369.897, 150.678"
+                      href="#" alt="醫學院">
+                <area shape="poly" coords="245.862, 254.338, 245.862, 293.175, 286.882, 293.175, 286.882, 254.338"
+                      href="#" alt="成杏廳">
+                <area shape="poly" coords="318.623, 260.213, 318.623, 309.895, 365.502, 309.895, 365.502, 260.213"
+                      href="#" alt="護理系館">
+                <area shape="poly" coords="396.510, 180.128, 396.510, 256.642, 472.445, 256.642, 472.445, 180.128"
+                      href="#" alt="醫工系館">
+                <area shape="poly" coords="396.510, 262.670, 396.510, 327.846, 460.725, 327.846, 460.725, 262.670"
+                      href="#" alt="物治系館">
+                <area shape="poly" coords="346.656, 317.628, 346.656, 362.007, 386.176, 362.007, 386.176, 317.628"
+                      href="#" alt="成杏平面">
+                <area shape="poly" coords="222.795, 371.394, 222.765, 415.804, 262.315, 415.804, 262.315, 371.394"
+                      href="#" alt="土木平面">
+                <area shape="poly" coords="348.073, 372.322, 348.073, 416.701, 387.593, 416.701, 387.593, 372.322"
+                      href="#" alt="水利平面">
+            </map>
+        </div>
+    </div>
+
+    <!-- information field -->
+    <div class="d-flex flex-column justify-content-center">
+        <div id="building"></div>
+        <div id="parking"></div>
+        <div id="info"></div>
+    </div>
+        
+    <section>
+        <div class="d-flex container-sm">
+            <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
+                <a href="Info">
+                    <img src="../assets/icon3.png" class="info-icon">
+                </a>
+                <a href="Map">
+                    <img src="../assets/icon1淺金.png" class="map-icon">
+                </a>
+                <a href="Apply">
+                    <img src="../assets/icon2.png" class="apply-icon">
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <main>
+        <!-- Awesome font -->
+        <script src="https://kit.fontawesome.com/517fa12b43.js" crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- hilightmap (jQuery) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.2/jquery.maphilight.min.js"
+            integrity="sha512-1YiTT24MNHA6DRzyu+w9F5Egc8evYlyEnzSSTD4/M7q42xEb5fSpNgn0+1CPy3evubHs3xdlh8uXgae0DOhR7Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- rwdMap (jQuery) -->
+        <script src="../static/js/rwdImageMaps.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // $('.map').maphilight();
+                $('.map').rwdImageMaps();
+            });
+            
+            $('area').on('click', function() {
+                let target = $(this).attr('alt');
+                $.ajax({
+                    type: "GET",
+                    url: "/distance/" + target,
+                    data: target,
+                    success: function(data) {
+                        let isParking = data["is_parking"];
+                        let title = document.getElementById("parking");
+                        title.innerHTML(target);
+                    }
+                })
+            });
+
+        </script>
+    </main>
+
+</body>
+
+</html>

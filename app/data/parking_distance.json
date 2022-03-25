@@ -434,6 +434,46 @@
             "distance": "900 公尺",
             "walking_time": "12 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "力行校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "900 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "950 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "1.0 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "850 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.8 公里",
+            "walking_time": "23 分",
+            "zone": "東寧校區"
         }
     },
     "力行平面": {
@@ -866,6 +906,51 @@
             "distance": "220 公尺",
             "walking_time": "3 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "700 公尺",
+            "walking_time": "8 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "280 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "290 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "300 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "350 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "400 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.6 公里",
+            "walking_time": "20 分",
+            "zone": "東寧校區"
         }
     },
     "成杏平面": {
@@ -1298,6 +1383,51 @@
             "distance": "700 公尺",
             "walking_time": "8 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.2 公里",
+            "walking_time": "14 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "750 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "750 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "750 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "850 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "900 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "850 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "東寧校區"
         }
     },
     "光復前門地停": {
@@ -1730,6 +1860,51 @@
             "distance": "800 公尺",
             "walking_time": "9 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.3 公里",
+            "walking_time": "16 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "600 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "600 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "東寧校區"
         }
     },
     "管院地停": {
@@ -2162,6 +2337,51 @@
             "distance": "700 公尺",
             "walking_time": "8 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.2 公里",
+            "walking_time": "14 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "500 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "500 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "750 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "東寧校區"
         }
     },
     "雲平地停": {
@@ -2594,6 +2814,51 @@
             "distance": "550 公尺",
             "walking_time": "6 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "350 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.2 公里",
+            "walking_time": "16 分",
+            "zone": "東寧校區"
         }
     },
     "雲平平面": {
@@ -3026,6 +3291,51 @@
             "distance": "550 公尺",
             "walking_time": "7 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "450 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "450 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "350 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "450 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.2 公里",
+            "walking_time": "15 分",
+            "zone": "東寧校區"
         }
     },
     "修齊地停": {
@@ -3458,6 +3768,51 @@
             "distance": "250 公尺",
             "walking_time": "3 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "750 公尺",
+            "walking_time": "9 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "300 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "300 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "350 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "400 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "400 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "700 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.5 公里",
+            "walking_time": "19 分",
+            "zone": "東寧校區"
         }
     },
     "光復平面": {
@@ -3890,6 +4245,51 @@
             "distance": "650 公尺",
             "walking_time": "7 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "450 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "500 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "500 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "東寧校區"
         }
     },
     "都計地停": {
@@ -4322,6 +4722,51 @@
             "distance": "350 公尺",
             "walking_time": "4 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "150 公尺",
+            "walking_time": "2 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "150 公尺",
+            "walking_time": "2 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "170 公尺",
+            "walking_time": "2 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "230 公尺",
+            "walking_time": "3 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "300 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "270 公尺",
+            "walking_time": "4 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.6 公里",
+            "walking_time": "20 分",
+            "zone": "東寧校區"
         }
     },
     "管院平面": {
@@ -4754,6 +5199,51 @@
             "distance": "750 公尺",
             "walking_time": "10 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.2 公里",
+            "walking_time": "16 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "600 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "600 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "東寧校區"
         }
     },
     "新園平面": {
@@ -5186,6 +5676,51 @@
             "distance": "600 公尺",
             "walking_time": "7 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "450 公尺",
+            "walking_time": "5 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "550 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "500 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "450 公尺",
+            "walking_time": "6 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "東寧校區"
         }
     },
     "土木平面": {
@@ -5618,6 +6153,51 @@
             "distance": "900 公尺",
             "walking_time": "11 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.4 公里",
+            "walking_time": "17 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "950 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.3 公里",
+            "walking_time": "16 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "850 公尺",
+            "walking_time": "11 分",
+            "zone": "東寧校區"
         }
     },
     "水利平面": {
@@ -6050,6 +6630,51 @@
             "distance": "600 公尺",
             "walking_time": "8 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "700 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "700 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "700 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "750 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "800 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "東寧校區"
         }
     },
     "生科平面": {
@@ -6482,6 +7107,51 @@
             "distance": "500 公尺",
             "walking_time": "6 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "600 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "700 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "650 公尺",
+            "walking_time": "9 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "950 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.3 公里",
+            "walking_time": "16 分",
+            "zone": "東寧校區"
         }
     },
     "三系館地停": {
@@ -6914,6 +7584,51 @@
             "distance": "1.6 公里",
             "walking_time": "11 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.6 公里",
+            "walking_time": "19 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "950 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "東寧校區"
         }
     },
     "成功地停": {
@@ -7346,6 +8061,51 @@
             "distance": "1.1 公里",
             "walking_time": "14 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.6 公里",
+            "walking_time": "20 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "950 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "800 公尺",
+            "walking_time": "10 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "600 公尺",
+            "walking_time": "8 分",
+            "zone": "東寧校區"
         }
     },
     "理學大樓地停": {
@@ -7778,6 +8538,51 @@
             "distance": "450 公尺",
             "walking_time": "6 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "600 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "650 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "600 公尺",
+            "walking_time": "8 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.3 公里",
+            "walking_time": "16 分",
+            "zone": "東寧校區"
         }
     },
     "奇美地停": {
@@ -8210,6 +9015,51 @@
             "distance": "1.2 公里",
             "walking_time": "15 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.7 公里",
+            "walking_time": "21 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.2 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.0 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "550 公尺",
+            "walking_time": "7 分",
+            "zone": "東寧校區"
         }
     },
     "自強平面(化工)": {
@@ -8642,6 +9492,51 @@
             "distance": "1.0 公里",
             "walking_time": "13 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.5 公里",
+            "walking_time": "19 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "850 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "900 公尺",
+            "walking_time": "12 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "900 公尺",
+            "walking_time": "11 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.2 公里",
+            "walking_time": "15 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "750 公尺",
+            "walking_time": "9 分",
+            "zone": "東寧校區"
         }
     },
     "自強平面(機械)": {
@@ -9074,6 +9969,51 @@
             "distance": "1.2 公里",
             "walking_time": "15 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "1.7 公里",
+            "walking_time": "21 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.2 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.2 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "1.1 公里",
+            "walking_time": "14 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "1.1 公里",
+            "walking_time": "13 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.4 公里",
+            "walking_time": "18 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "1.0 公里",
+            "walking_time": "12 分",
+            "zone": "東寧校區"
         }
     },
     "勝後平面": {
@@ -9506,6 +10446,51 @@
             "distance": "1.6 公里",
             "walking_time": "20 分",
             "zone": "光復校區"
+        },
+        "生物科技教學大樓": {
+            "distance": "2.1 公里",
+            "walking_time": "26 分",
+            "zone": "力行校區"
+        },
+        "國立成功大學建築學系": {
+            "distance": "1.5 公里",
+            "walking_time": "19 分",
+            "zone": "光復校區"
+        },
+        "工設二館(空中大學)": {
+            "distance": "1.5 公里",
+            "walking_time": "19 分",
+            "zone": "光復校區"
+        },
+        "禮賢樓 (國立成功大學藝術研究所)": {
+            "distance": "1.4 公里",
+            "walking_time": "18 分",
+            "zone": "光復校區"
+        },
+        "國立成功大學建築研究大樓": {
+            "distance": "1.5 公里",
+            "walking_time": "19 分",
+            "zone": "光復校區"
+        },
+        "光三舍": {
+            "distance": "1.5 公里",
+            "walking_time": "18 分",
+            "zone": "光復校區"
+        },
+        "光二舍": {
+            "distance": "1.4 公里",
+            "walking_time": "18 分",
+            "zone": "光復校區"
+        },
+        "光復操場": {
+            "distance": "1.3 公里",
+            "walking_time": "16 分",
+            "zone": "光復校區"
+        },
+        "701台南市東區學人宿舍": {
+            "distance": "500 公尺",
+            "walking_time": "7 分",
+            "zone": "東寧校區"
         }
     }
 }

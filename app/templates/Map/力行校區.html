@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>NCKU parking map</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+    <!-- Custom styles for this template -->
+    <link href="../static/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="d-flex justify-content-center container-fluid shadow">
+            <div class="pt-5 pb-4">
+                <a href="Map" class="title">
+                    <img src="../assets/Group 39.png" class="logo-small">
+                    <span>
+                        成大停車場查詢
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="d-flex flex-column container-fluid fullfill justify-content-center aling-content-center">
+        
+        <!-- subtitle -->
+        <div class="d-flex justify-content-center">
+            <p id="subtitle" class="p-2 m-4">請選擇建築物或停車場</p>
+        </div>
+        
+
+        <!-- map -->
+        <div class="my-3 d-flex justify-content-center aling-content-center">
+            <img src="../assets/力行.png" usemap="#ncku-map" alt="replaced word"
+                class="map img-fluid">
+            <!-- coordinate 從左上角的左下開始逆時鐘放 -->
+            <map name="ncku-map">
+                <area shape="poly" coords="225.178, 79.991, 225.178, 128.658, 288.345, 128.658, 288.345, 79.991"
+                      href="#" alt="生科大樓地下停車場">
+                <area shape="poly" coords="210.394, 138.506, 210.394, 210.624, 324.855, 210.624, 324.855, 138.506"
+                      href="#" alt="生科系館">
+                <area shape="poly" coords="364.553, 134.262, 364.553, 210.624, 431.435, 210.624, 431.435, 134.262"
+                      href="#" alt="醫護大樓">
+                <area shape="poly" coords=""
+                      href="#" alt="統一健康大樓">
+                <area shape="poly" coords="168.711, 217.627, 168.711, 262.231, 237.190, 262.231, 237.190, 217.627"
+                      href="#" alt="台文系館">
+                <area shape="poly" coords="408.539, 220.549, 408.539, 252.054, 454.329, 252.054, 454.329, 220.549"
+                      href="#" alt="心理健康中心">
+                <area shape="poly" coords="115.119, 275.850, 115.119, 320.455, 177.312, 320.455, 177.312, 275.850"
+                      href="#" alt="公衛大樓">
+                <area shape="poly" coords="186.575, 312.185, 186.575, 338.849, 251.084, 338.849, 251.084, 312.185"
+                      href="#" alt="綠建築">
+                <area shape="poly" coords="243.475, 257.987, 243.475, 312.185, 305.502, 312.185, 305.502, 257.987"
+                      href="#" alt="社科院大樓">
+                <area shape="poly" coords="307.045, 292.991, 307.045, 341.675, 340.280, 341.675, 340.280, 292.991"
+                      href="#" alt="力行平面">
+                <area shape="poly" coords="341.805, 272.156, 341.805, 338.849, 479.014, 338.849, 479.014, 272.156"
+                      href="#" alt="附設醫院第二大樓">
+                <area shape="poly" coords="264.798, 379.925, 264.798, 312.185, 318.617, 312.185, 318.617, 379.925"
+                      href="#" alt="都計地停">
+                <area shape="poly" coords="323.628, 390.169, 323.628, 438.836, 377.447, 438.836, 377.447, 390.169"
+                      href="#" alt="修齊地停">
+            </map>
+        </div>
+    </div>
+
+    <!-- information field -->
+    <div class="d-flex flex-column justify-content-center">
+        <div id="building"></div>
+        <div id="parking"></div>
+        <div id="info"></div>
+    </div>
+        
+    <section>
+        <div class="d-flex container-sm">
+            <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
+                <a href="Info">
+                    <img src="../assets/icon3.png" class="info-icon">
+                </a>
+                <a href="Map">
+                    <img src="../assets/icon1淺金.png" class="map-icon">
+                </a>
+                <a href="Apply">
+                    <img src="../assets/icon2.png" class="apply-icon">
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <main>
+        <!-- Awesome font -->
+        <script src="https://kit.fontawesome.com/517fa12b43.js" crossorigin="anonymous"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- hilightmap (jQuery) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.2/jquery.maphilight.min.js"
+            integrity="sha512-1YiTT24MNHA6DRzyu+w9F5Egc8evYlyEnzSSTD4/M7q42xEb5fSpNgn0+1CPy3evubHs3xdlh8uXgae0DOhR7Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- rwdMap (jQuery) -->
+        <script src="../static/js/rwdImageMaps.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // $('.map').maphilight();
+                $('.map').rwdImageMaps();
+            });
+            
+            $('area').on('click', function() {
+                let target = $(this).attr('alt');
+                $.ajax({
+                    type: "GET",
+                    url: "/distance/" + target,
+                    data: target,
+                    success: function(data) {
+                        let isParking = data["is_parking"];
+                        let title = document.getElementById("parking");
+                        title.innerHTML(target);
+                    }
+                })
+            });
+
+        </script>
+    </main>
+
+</body>
+
+</html>
