@@ -43,19 +43,38 @@
         </div>
     </header>
 
-    <nav>
-        <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="apply/chart">申請流程說明</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="apply/personal">個人基本資料維護</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="apply/license">機車通行證申請資料</a>
-            </li>
-        </ul>
-    </nav>
+    <!-- image -->
+    <img src="../assets/Group 39.png">
+    <!-- student id -->
+    <input type = "text" placeholder = "請輸入學號">
+    <!-- password -->
+    <input type = "password" placeholder = "請輸入密碼">
+    <!-- identification -->
+
+    <!-- login button -->
+
+    <p>驗證碼：</p>
+    <div id="login" onclick="show()">
+        <a href="#"></a>
+    </div>
+    <!--
+    <script type="text/javascript">
+        function codes(n){
+            var a="azxcvbnmsdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP0123456789";
+            var b="";
+            for (var i = 0; i<n; i++)
+            {
+                var index = Math.floor(Math.random()*62);
+                b = a.charAt(index);
+            }
+            return b;
+        };
+        function show(){
+            document.getElementById("login").innerHTML=codes(4);
+        }
+        window.onload=show;
+    </script>
+    -->
 
     <section>
         <div class="d-flex container-sm">
