@@ -46,17 +46,25 @@ def read_info():
 def read_apply():
     return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
 
-@app.get("/apply/chart")
-def read_apply_chart():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "chart.html"))
+@app.get("/login")
+def read_login():
+    return FileResponse(os.path.join(base_path, "templates", "login.html"))
 
-@app.get("/apply/license")
-def read_apply_license():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "license.html"))
+@app.get("/apply/chart/chart")
+def read_apply_chart_chart():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "chart", "chart.html"))
 
-@app.get("/apply/personal")
-def read_apply_personal():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "personal.html"))
+@app.get("/apply/license/license")
+def read_apply_license_license():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
+
+@app.get("/apply/personal/personal")
+def read_apply_personal_personal():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
+
+@app.get("/apply/payment/payment")
+def read_apply_payment_payment():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
 
 @app.get("/Map")
 def read_map():
@@ -70,17 +78,25 @@ def read_info():
 def read_apply():
     return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
 
-@app.get("/apply/chart")
-def read_apply_chart():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "chart.html"))
+@app.get("/login")
+def read_login():
+    return FileResponse(os.path.join(base_path, "templates", "login.html"))
 
-@app.get("/apply/license")
-def read_apply_license():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "license.html"))
+@app.get("/apply/chart/chart")
+def read_apply_chart_chart():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "chart", "chart.html"))
 
-@app.get("/apply/personal")
-def read_apply_personal():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "personal.html"))
+@app.get("/apply/license/license")
+def read_apply_license_license():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
+
+@app.get("/apply/personal/personal")
+def read_apply_personal_personal():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
+
+@app.get("/apply/payment/payment")
+def read_apply_payment_payment():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
 
 @app.get("/buildings/{building_name}")
 def read_buildings(building_name: str):
