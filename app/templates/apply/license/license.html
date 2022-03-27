@@ -38,6 +38,18 @@
     
   </head>
 <body>
+    <header>
+        <div class="d-flex justify-content-center container-fluid shadow">
+            <div class="pt-5 pb-4">
+                <a href="/Map" class="title">
+                    <img src="/assets/Group 39.png" class="logo-small">
+                    <span>
+                        成大停車證申請
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
     <div>
 
         <nav>
@@ -51,40 +63,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="license">機車通行證申請資料</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../payment/payment">上傳出納繳交平台</a>
+                </li>
             </ul>
         </nav>
 
-        <form action="" method="">
-        <table>
-            <thead>
-                <p>停車證申請</p>
-                <tr>
-                    <th>車牌號碼</th>
-                    <th><input type = "text"></th>
-                    <th>機車廠牌</th>
-                    <th><input type = "text"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>機車顏色</th>
-                    <th><input type = "text"></th>
-                    <th>通行證類別</th>
-                    <th>
-                        <input list="browsers">
-                        <datalist id="browsers">
-                        <option value="學生機車地下停車證">
-                        <option value="學生大型重機地下停車證">
-                        </datalist>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <input type = "submit" value = "申請">
-        <br>
-        <br>
-        </form>
+        <input type="button" 
+               value="序號: 073001 車牌號碼: ABC-1234 機車顏色: 白" 
+               class = "btn1" 
+               onclick="location.href='info'">
+
+        <input type="button" 
+               value="+ 新增停車證" 
+               class = "btn2" 
+               onclick="location.href='create'">
+
     </div>
 
     <section>

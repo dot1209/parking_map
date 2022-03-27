@@ -58,9 +58,29 @@ def read_apply_chart_chart():
 def read_apply_license_license():
     return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
 
+@app.get("/apply/license/info")
+def read_apply_license_info():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "info.html"))
+
+@app.get("/apply/license/create")
+def read_apply_license_create():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "create.html"))
+
+@app.get("/apply/license/success")
+def read_apply_license_success():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "success.html"))
+
 @app.get("/apply/personal/personal")
 def read_apply_personal_personal():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
+
+@app.get("/apply/personal/modify")
+def read_apply_personal_modify():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "modify.html"))
+
+@app.get("/apply/personal/success")
+def read_apply_personal_success():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "success.html"))
 
 @app.get("/apply/payment/payment")
 def read_apply_payment_payment():
