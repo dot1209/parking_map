@@ -1,5 +1,6 @@
 import json
 import os
+import header
 from pathlib import Path
 from typing import Dict
 
@@ -7,9 +8,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 
-from api import distance, zone
+
+from api import distance, zone, login
 
 app = FastAPI()
 
@@ -27,8 +28,7 @@ app.add_middleware(
 
 base_path = Path().resolve()
 
-class Item(BaseModel):
-    parking_info: Dict[str, str]
+
 
 @app.get("/")
 def read_root():
@@ -94,3 +94,9 @@ def read_buildings(target_name: str):
 @app.get("/zone/{building_name}")
 def read_zone(building_name: str):
     return zone.find_zone(building_name)
+
+@app.post("/login")
+def read_login(textContent: header.Info):
+    # print(textContent)
+    return textContent
+
