@@ -52,18 +52,18 @@ a.title {
 .navbar.footer {
     background-color: #B30030;
 }
-
 /* bottom navbar */
-
-/* .map {
-    width: 415px;
-    height: 436px;
-} */
 
 .map {
     width: 84.6%;
     max-width: 375px;
     max-height: 395px;
+}
+
+.sub-map {
+    width: 100%;
+    max-width: 399px;
+    max-height: 389.25px;
 }
 
 /* icon */
@@ -107,6 +107,11 @@ a.title {
 
 .input-field {
     width: 80%;
+}
+
+.info-field {
+    padding-bottom: 48px;
+    margin: 32px;
 }
 
 .search-icon {
