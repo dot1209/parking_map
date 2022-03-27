@@ -62,6 +62,14 @@ def read_apply_license_license():
 def read_apply_personal_personal():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
 
+@app.get("/apply/personal/modify")
+def read_apply_personal_modify():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "modify.html"))
+
+@app.get("/apply/personal/success")
+def read_apply_personal_success():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "success.html"))
+
 @app.get("/apply/payment/payment")
 def read_apply_payment_payment():
     return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
@@ -93,6 +101,14 @@ def read_apply_license_license():
 @app.get("/apply/personal/personal")
 def read_apply_personal_personal():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
+
+@app.get("/apply/personal/modify")
+def read_apply_personal_modify():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "modify.html"))
+
+@app.get("/apply/personal/success")
+def read_apply_personal_success():
+    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "success.html"))
 
 @app.get("/apply/payment/payment")
 def read_apply_payment_payment():
