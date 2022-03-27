@@ -58,55 +58,63 @@
                     <a class="nav-link" href="../chart/chart">申請流程說明</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="personal">個人基本資料維護</a>
+                    <a class="nav-link" href="../personal/personal">個人基本資料維護</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../license/license">機車通行證申請資料</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../payment/payment">上傳出納繳交平台</a>
+                    <a class="nav-link" href="payment">上傳出納繳交平台</a>
                 </li>
             </ul>
         </nav>
 
-        <form action="" method="">
-        <b>個人基本資料維護及修改</b>
+        <b>上傳出納繳交平台</b>
         <br>
         <br>
-        學號
+        Step 1    選擇需繳費停車證
         <br>
-        A12345678
-        <br>
-        <br>
-        姓名
-        <br>
-        王大明
+        <input type="button" 
+               value="序號: 073001 車牌號碼: ABC-1234 機車顏色: 白" 
+               class = "btn1">
         <br>
         <br>
-        系所名稱
+        Step 2    點擊下方按鈕
         <br>
-        資訊工程學系
-        <br>
-        <br>
-        連絡電話
-        <br>
-        (06)5555487
+        <input type="button" 
+               value="產生繳費帳號" 
+               class = "btn2" 
+               onclick="step2()">
         <br>
         <br>
-        E-mail
+        Step 3    點擊下方按鈕
         <br>
-        nihaoma@gmail.com
+        <input type="button" 
+               value="產生出納繳費資料" 
+               class = "btn3" 
+               onclick="step3()">
         <br>
         <br>
+        Step 4    點擊下方按鈕
         <br>
-        <input type = "button" value = "修改" onclick = "location.href = 'modify'">
-        <br>
-        <br>
-        </form>
-    </div>
+        <input type="button" 
+               value="下載繳費單" 
+               class = "btn4" 
+               onclick="step4()">
 
-    <div>
+
     </div>
+    <script>
+        function step2() {
+          alert("已產生交費帳號!");
+        }
+        function step3() {
+          alert("已產生出納繳費資料!");
+        }
+        function step4() {
+          alert("已下載繳費單!");
+        }
+    </script>
 
     <section>
         <div class="d-flex container-sm">
@@ -123,30 +131,6 @@
             </nav>
         </div>
     </section>
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $("form").submit(function(e) {
-            let inputText = $('input[type=text]').val();
-            $.ajax({
-                type: "GET",
-                url: "/apply/personal/personal",
-                dataType: "json", // serializes the form's elements.
-                success: function(data) {
-                    console.log("hi hi hi");
-                    $('#ID').html(data.ID);
-                },
-                error: function () {
-                    console.log("error");
-                }
-            });
-            e.preventDefault(); // avoid to execute the actual submit of the form.
-        });            
-    </script>
 
 </body>
 </html>
