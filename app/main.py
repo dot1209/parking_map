@@ -38,45 +38,13 @@ def read_root():
 def read_map():
     return FileResponse(os.path.join(base_path, "templates", "Map.html"))
 
-@app.get("/Info")
-def read_info():
-    return FileResponse(os.path.join(base_path, "templates", "Info.html"))
-
-@app.get("/Apply")
-def read_apply():
-    return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
-
-@app.get("/login")
-def read_login():
-    return FileResponse(os.path.join(base_path, "templates", "login.html"))
-
-@app.get("/apply/chart/chart")
-def read_apply_chart_chart():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "chart", "chart.html"))
-
-@app.get("/apply/license/license")
-def read_apply_license_license():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
-
-@app.get("/apply/personal/personal")
-def read_apply_personal_personal():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
-
-@app.get("/apply/payment/payment")
-def read_apply_payment_payment():
-    return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
-
-@app.get("/Map")
-def read_map():
-    return FileResponse(os.path.join(base_path, "templates", "Map.html"))
+@app.get("/Map/{zone}")
+def read_map(zone: str):
+    return FileResponse(os.path.join(base_path, "templates", "Map", zone + ".html"))
 
 @app.get("/Info")
 def read_info():
     return FileResponse(os.path.join(base_path, "templates", "Info.html"))
-
-@app.get("/Apply")
-def read_apply():
-    return FileResponse(os.path.join(base_path, "templates", "Apply.html"))
 
 @app.get("/login")
 def read_login():
