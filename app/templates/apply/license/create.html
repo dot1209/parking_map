@@ -66,16 +66,35 @@
             </ul>
         </nav>
 
-        <input type="button" 
-               value="序號: 073001 車牌號碼: ABC-1234 機車顏色: 白" 
-               class = "btn1" 
-               onclick="location.href='info'">
-
-        <input type="button" 
-               value="+ 新增停車證" 
-               class = "btn2" 
-               onclick="location.href='create'">
-
+                <b>機車通行證申請資料</b>
+                    <br>
+                    <br>
+                    車牌號碼
+                    <br>
+                    <input type = "text" placeholder = "請輸入車牌號碼">
+                    <br>
+                    <br>
+                    機車廠牌
+                    <br>
+                    <input type = "text" placeholder = "請輸入機車廠牌">
+                    <br>
+                    <br>
+                    機車顏色
+                    <br>
+                    <input type = "text" placeholder = "請輸入機車顏色">
+                    <br>
+                    <br>
+                    通行證類別
+                    <br>
+                    <input list="browsers">
+                    <datalist id="browsers">
+                    <option value="學生機車地下停車證">
+                    <option value="學生大型重機地下停車證">
+                    </datalist>
+        <br>
+        <input type = "button" value = "申請" onclick="location.href='success'">
+        <br>
+        <br>
     </div>
 
     <section>
