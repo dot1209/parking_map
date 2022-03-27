@@ -49,7 +49,7 @@
         <!-- map -->
         <div class="my-3 d-flex justify-content-center aling-content-center">
             <img src="/assets/map/光復.png" usemap="#ncku-map" alt="replaced word"
-                class="map img-fluid">
+                class="sub-map img-fluid">
                 <!-- coordinate 從左上角的左下開始逆時鐘放 -->
             <map name="ncku-map">
             </map>
@@ -57,10 +57,21 @@
     </div>
 
     <!-- information field -->
-    <div class="d-flex flex-column justify-content-center">
-        <div id="building"></div>
-        <div id="parking"></div>
-        <div id="info"></div>
+    <div class="info-field d-flex flex-column justify-content-center">
+        <div>
+            <div id="title" class="mb-4" style="color: #90693E;"></div>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="d-flex">
+                <div id="is-parking"></div><div id="nearest"></div>
+            </div>
+            <div class="d-flex">
+                <div id="distance"></div>
+            </div>
+            <div class="d-flex">
+                <div id="walking-time"></div>
+            </div>
+        </div>
     </div>
         
     <section>
@@ -95,27 +106,7 @@
         <!-- rwdMap (jQuery) -->
         <script src="/static/js/rwdImageMaps.min.js"></script>
 
-        <script>
-            $(document).ready(function() {
-                // $('.map').maphilight();
-                $('.map').rwdImageMaps();
-            });
-            
-            $('area').on('click', function() {
-                let target = $(this).attr('alt');
-                $.ajax({
-                    type: "GET",
-                    url: "/distance/" + target,
-                    data: target,
-                    success: function(data) {
-                        let isParking = data["is_parking"];
-                        let title = document.getElementById("parking");
-                        title.innerHTML(target);
-                    }
-                })
-            });
-
-        </script>
+        <script src="/static/js/submap.js"></script>
     </main>
 
 </body>
