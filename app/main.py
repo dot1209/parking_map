@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from api import buildings, parking, zone
+from api import buildings, parking, zone, new
 
 app = FastAPI()
 
@@ -97,3 +97,9 @@ def read_zone(building_name: str):
 @app.get("/parking/{parking_name}")
 def read_parking(parking_name: str):
     return parking.get_nearest_parking(parking_name, 3)
+
+@app.get("/new")
+def new():
+    return "hello world"
+
+
