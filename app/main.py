@@ -9,7 +9,11 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+<<<<<<< HEAD
 from api import buildings, parking, zone, new
+=======
+from api import distance, zone
+>>>>>>> 4489943a7ce0c4ae11b58b7faceb67c08879370f
 
 app = FastAPI()
 
@@ -86,9 +90,10 @@ def read_apply_personal_success():
 def read_apply_payment_payment():
     return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
 
-@app.get("/buildings/{building_name}")
-def read_buildings(building_name: str):
-    return buildings.get_nearest_parking(building_name, 3)
+@app.get("/distance/{target_name}")
+def read_buildings(target_name: str):
+    print(target_name)
+    return distance.get_nearest_target(target_name, 3)
 
 @app.get("/zone/{building_name}")
 def read_zone(building_name: str):
