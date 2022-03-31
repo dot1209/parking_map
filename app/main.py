@@ -7,9 +7,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 
-from api import distance, zone, login
+
+from api import distance, zone, login, header
 
 app = FastAPI()
 
@@ -27,8 +27,7 @@ app.add_middleware(
 
 base_path = Path().resolve()
 
-class Item(BaseModel):
-    parking_info: Dict[str, str]
+
 
 @app.get("/")
 def read_root():
@@ -100,7 +99,7 @@ def read_parking(parking_name: str):
     return parking.get_nearest_parking(parking_name, 3)
 
 @app.post("/login/{textContent}")
-def read_login(textContent: str):
+def read_login(textContent: Info):
     print(textContent)
     return login.identify(textContent)
 

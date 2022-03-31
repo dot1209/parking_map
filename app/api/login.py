@@ -1,14 +1,14 @@
 import json
 import os
 import pathlib
+from pydantic import BaseModel
 
-def identify(name: str):
+def identify(textContent: Info):
     base_path = pathlib.Path().resolve()
     data_path = os.path.join(base_path, "data")
 
     with open(os.path.join(data_path, "personal_info.json"), "w", encoding="utf8") as f:
-        # ncku_buildings = json.load(f)
-        f.write(name)
+        f.write(json.dumps(textContent))
         f.close()
 
     return None
