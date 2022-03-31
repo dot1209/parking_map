@@ -1,5 +1,6 @@
 import json
 import os
+import header
 from pathlib import Path
 from typing import Dict
 
@@ -9,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 
-from api import distance, zone, login, header
+from api import distance, zone, login
 
 app = FastAPI()
 
