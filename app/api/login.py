@@ -1,9 +1,12 @@
 import json
 import os
 import pathlib
+import sys
+sys.path.append(".")
+
 import header
 
-def identify(textContent: Info):
+def identify(textContent: header.Info):
     base_path = pathlib.Path().resolve()
     data_path = os.path.join(base_path, "data")
 
