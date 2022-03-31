@@ -70,32 +70,23 @@
         </nav>
 
                 <b>機車通行證申請資料</b>
-                    <br>
-                    <br>
-                    車牌號碼
-                    <br>
+                <form action = "get" method = "success">
+                    <label form = "name">車牌號碼</label>
                     <input type = "text" placeholder = "請輸入車牌號碼">
-                    <br>
-                    <br>
-                    機車廠牌
-                    <br>
+                    <label form = "name">機車廠牌</label>
                     <input type = "text" placeholder = "請輸入機車廠牌">
-                    <br>
-                    <br>
-                    機車顏色
-                    <br>
+                    <label form = "text">機車顏色</label>
                     <input type = "text" placeholder = "請輸入機車顏色">
-                    <br>
-                    <br>
-                    通行證類別
-                    <br>
+                    <label form = "name">通行證類別</label>
                     <input list="browsers">
                     <datalist id="browsers">
                     <option value="學生機車地下停車證">
                     <option value="學生大型重機地下停車證">
                     </datalist>
-        <br>
-        <input type = "button" value = "申請" onclick="location.href='success'">
+        <button type = "submit">
+            申請
+        </button>
+        </form>
         <br>
         <br>
     </div>
