@@ -99,8 +99,8 @@ def read_zone(building_name: str):
 def read_parking(parking_name: str):
     return parking.get_nearest_parking(parking_name, 3)
 
-@app.post("/login/")
-def get_login(textContent: header.Info):
-    print(textContent)
-    return login.identify(textContent)
+@app.post("/login")
+def read_login(textContent: header.Info):
+    # print(textContent)
+    return textContent
 
