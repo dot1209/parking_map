@@ -109,6 +109,6 @@ def read_create(textContent: header.motorInfo):
     # print(textContent)
     return textContent
 
-@app.get("/apply/personal/personal")
+@app.get("/apply/personal/personal-data")
 def read_personal_info():
-    return show_personal_info()
+    return personal.show_personal_info()
