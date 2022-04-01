@@ -95,10 +95,6 @@ def read_buildings(target_name: str):
 def read_zone(building_name: str):
     return zone.find_zone(building_name)
 
-@app.get("/parking/{parking_name}")
-def read_parking(parking_name: str):
-    return parking.get_nearest_parking(parking_name, 3)
-
 @app.post("/login")
 def read_login(textContent: header.Info):
     # print(textContent)
