@@ -26,3 +26,6 @@ def new(string):
 # show license info
 # output: apply/license/license
 # output: apply/license/info (in detail)
+def show_license():
+    pass
+

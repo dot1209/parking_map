@@ -72,36 +72,27 @@
         <form action="" method="">
         <b>個人基本資料維護及修改</b>
         <br>
-        <br>
         學號
         <br>
-        A12345678
-        <br>
+        <div id = "ID" onload = "load_json()"></div>
         <br>
         姓名
         <br>
-        王大明
-        <br>
+        <div id = "name" onload = "load_json()"></div>
         <br>
         系所名稱
         <br>
-        資訊工程學系
-        <br>
+        <div id = "dep" onload = "load_json()"></div>
         <br>
         連絡電話
         <br>
-        (06)5555487
-        <br>
+        <div id = "tel" onload = "load_json()"></div>
         <br>
         E-mail
         <br>
-        nihaoma@gmail.com
-        <br>
-        <br>
+        <div id = "email" onload = "load_json()"></div>
         <br>
         <input type = "button" value = "修改" onclick = "location.href = 'modify'">
-        <br>
-        <br>
         </form>
     </div>
 
@@ -130,22 +121,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        $("form").submit(function(e) {
-            let inputText = $('input[type=text]').val();
-            $.ajax({
-                type: "GET",
-                url: "/apply/personal/personal",
-                dataType: "json", // serializes the form's elements.
-                success: function(data) {
-                    console.log("hi hi hi");
-                    $('#ID').html(data.ID);
-                },
-                error: function () {
-                    console.log("error");
-                }
-            });
-            e.preventDefault(); // avoid to execute the actual submit of the form.
-        });            
+          window.onload = load_json;
+          function load_json() {
+              let target = $(this).attr('div');
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/personal/personal-data",
+                  data: target,
+                  success: function(data) {
+                      let ID = document.getElementById("ID")
+                      let name = document.getElementById("name");
+                      let dep = document.getElementById("dep");
+                      let tel = document.getElementById("tel");
+                      let email = document.getElementById("email");
+                      
+                      ID.innerHTML = data["ID"];
+                      name.innerHTML = data["name"];
+                      dep.innerHTML = data["dep"];
+                      tel.innerHTML = data["tel"];
+                      email.innerHTML = data["email"];
+                  }
+              });
+        };
     </script>
 
 </body>

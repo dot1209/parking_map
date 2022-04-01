@@ -3,3 +3,5 @@
 **/*.pyc
 
 .env
+
+/app/data/personal_info.json
