@@ -4,16 +4,10 @@ import header
 from pathlib import Path
 from typing import Dict
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-
-# debug
-from fastapi import FastAPI, Request, status
-from fastapi.encoders import jsonable_encoder
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
 
 
 from api import distance, zone, login
@@ -107,14 +101,6 @@ def read_parking(parking_name: str):
 
 @app.post("/login/")
 def get_login(textContent: header.Info):
-# def get_login(request: Request):
     print(textContent)
     return login.identify(textContent)
-    # return None
 
-@app.exception_handler(RequestValidationError)
-async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    print(JSONResponse(
-        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-        content=jsonable_encoder({"detail": exc.errors(), "body": exc.body}),
-    ))
