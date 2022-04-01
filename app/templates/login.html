@@ -135,9 +135,10 @@
         const handleFormSubmit = (event, textContent) => {
             event.preventDefault();
             const data = formToJSON(form.elements);
-            // textContent = JSON.stringify(data, null, '  ');
             delete data[""];
-            textContent = data;
+            textContent = JSON.stringify(data, null, '  ');
+            // textContent = data;
+            console.log(textContent);
             console.log(JSON.stringify(data, null, '  '));
         };
 
@@ -149,8 +150,10 @@
                 // let inputText = $('input[type=text]').val();
                 $.ajax({
                     type: "POST",
-                    url: "/login/" + textContent,
+                    url: "/login/",
+                    async: false,
                     dataType: "json",
+                    contentType: "application/json; charset=UTF-8",
                     data: textContent, // serializes the form's elements.
                     success: function(data) {
                         // console.log(textContent);
