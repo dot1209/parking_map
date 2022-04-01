@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 
-from api import distance, zone, login
+from api import distance, zone, login, personal
 
 app = FastAPI()
 
@@ -104,3 +104,15 @@ def read_login(textContent: header.Info):
     # print(textContent)
     return textContent
 
+@app.post("/apply/personal/modify")
+def read_modify(textContent: header.personInfo):
+    return personal.modify_personal_info(textContent)
+
+@app.post("/apply/license/create")
+def read_create(textContent: header.motorInfo):
+    # print(textContent)
+    return textContent
+
+@app.get("/apply/personal/personal")
+def read_personal_info():
+    return show_personal_info()
