@@ -27,7 +27,5 @@ def new(string):
 # output: apply/license/license
 # output: apply/license/info (in detail)
 def show_license():
+    pass
 
-
-=======
->>>>>>> b12ba2f898d88f522239bd86f60cf82d11fca3e6
