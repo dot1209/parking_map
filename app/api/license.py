@@ -24,9 +24,8 @@ def add_license(objInfo: header.motorInfo):
     return None
 
 # show license info
+# output: apply/license/license
+# output: apply/license/info (in detail)
 def show_license():
-    base_path = pathlib.Path().resolve()
-    data_path = os.path.join(base_path, "data")
-    
-    return json.load(open(data_path + "/license_info.json"))
+    pass
 

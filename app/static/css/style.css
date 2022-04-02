@@ -86,6 +86,15 @@ a.title {
     width: 37px;
     height: 27px;
 }
+
+.logo-medium {
+    /* width: 97.5px;
+    height: 126.865px; */
+    /* width: 40vw; */
+    max-width: 135.68px;
+    max-height: 176.68px;
+    margin: 32px;
+}
 /* icon */
 
 #subtitle {
@@ -114,6 +123,17 @@ a.title {
     margin: 32px;
 }
 
+.valid-img {
+    width: 93px;
+    height: 33px;
+    margin: 0;
+}
+
+.border-brown {
+    border: 1px solid #90693E;
+    border-radius: 30px;
+}
+
 .search-icon {
     cursor: pointer;
 }
@@ -132,4 +152,11 @@ a.title {
 
 .font-20 {
     font-size: 20px;
+}
+
+.btn-red {
+    background-color: #B30030;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 24px;
 }

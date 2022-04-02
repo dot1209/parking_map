@@ -28,4 +28,9 @@ $('area').on('click', function() {
           walkingTime.innerHTML = "步行時間： " + data["result"][0]["info"]["walking_time"];
       }
   });
+  
+  $("html, body").animate({
+      scrollTop: $(document).height()
+  });
+
 });
