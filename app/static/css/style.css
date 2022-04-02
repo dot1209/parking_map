@@ -52,6 +52,10 @@ a.title {
 .navbar.footer {
     background-color: #B30030;
 }
+
+.p-footer {
+    padding-top: 72px;
+}
 /* bottom navbar */
 
 .map {
@@ -62,8 +66,8 @@ a.title {
 
 .sub-map {
     width: 100%;
-    max-width: 399px;
-    max-height: 389.25px;
+    /* max-width: 399px;
+    max-height: 389.25px; */
 }
 
 /* icon */
@@ -129,6 +133,23 @@ a.title {
     margin: 0;
 }
 
+.license {
+    background-color: #B30030;
+    color: #fff;
+    font-size: 18px;
+    width: 275px;
+    height: 145px;
+    border-radius: 20px;
+}
+
+.add-license {
+    background-color: #fff;
+    color: #707070;
+    width: 275px;
+    height: 145px;
+    border-radius: 20px;
+}
+
 .border-brown {
     border: 1px solid #90693E;
     border-radius: 30px;
@@ -150,8 +171,16 @@ a.title {
     font-size: 12px;
 }
 
+.font-14 {
+    font-size: 14px;
+}
+
 .font-20 {
     font-size: 20px;
+}
+
+.font-56 {
+    font-size: 56px;
 }
 
 .btn-red {
