@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 
-from api import distance, zone, login, personal
+from api import distance, zone, login, personal, license
 
 app = FastAPI()
 
@@ -57,6 +57,18 @@ def read_apply_chart_chart():
 @app.get("/apply/license/license")
 def read_apply_license_license():
     return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
+
+@app.get("/apply/license/button-data")
+def read_apply_button_data():
+    return license.show_licenses()
+
+@app.post("/apply/license/key-data")
+def read_get_button_value(textContent: header.detailInfo):
+    return license.get_button_key(textContent)
+
+@app.get("/apply/license/info-data")
+def read_detail_data():
+    return license.show_license()
 
 @app.get("/apply/license/info")
 def read_apply_license_info():
@@ -110,6 +122,5 @@ def read_modify(textContent: header.personInfo):
 
 @app.post("/apply/license/create")
 def read_create(textContent: header.motorInfo):
-    # print(textContent)
-    return textContent
+    return license.add_license(textContent)
 

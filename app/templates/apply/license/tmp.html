@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>NCKU parking map</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .btn {
+        background-color: red; /* Green */
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+  </head>
+<body>
+    <header>
+        <div class="d-flex justify-content-center container-fluid shadow">
+            <div class="pt-5 pb-4">
+                <a href="/Map" class="title">
+                    <img src="/assets/Group 39.png" class="logo-small">
+                    <span>
+                        成大停車證申請
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div>
+
+        <nav>
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../chart/chart">申請流程說明</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../personal/personal">個人基本資料維護</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="license">機車通行證申請資料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../payment/payment">上傳出納繳交平台</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- onclick link to info -->
+        <button type = "button" class = "btn" id = "1"></button>
+        <button type = "button" class = "btn" id = "2"></button>
+        <button type = "button" class = "btn" id = "3"></button>
+        <button type = "button" class = "btn" id = "4"></button>
+        <button type = "button" class = "btn" id = "5"></button>
+        <button type = "button" class = "btn" id = "6"></button>
+
+        <input type="button" 
+               value="+ 新增停車證" 
+               onclick="location.href='create'" >
+
+    </div>
+
+    <section>
+        <div class="d-flex container-sm">
+            <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
+                <a href="/Info">
+                    <img src="/assets/icon3.png" class="info-icon">
+                </a>
+                <a href="/Map">
+                    <img src="/assets/icon1.png" class="map-icon">
+                </a>
+                <a href="/login">
+                    <img src="/assets/icon2淺金.png" class="apply-icon">
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+          window.onload = load_json;
+
+          function load_json() {
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/license/button-data",
+                  success: function(data) {
+                      var buttons = [ document.getElementById("1"),
+                                      document.getElementById("2"),
+                                      document.getElementById("3"),
+                                      document.getElementById("4"),
+                                      document.getElementById("5"),
+                                      document.getElementById("6") ];
+                      let i;
+                      for(i = 1; i < 6; i++)
+                      {
+                          if(i > parseInt(data["counter"]))
+                          {
+                              buttons[i-1].innerHTML = "";
+                              buttons[i-1].value = "";
+                          }
+                          else
+                          {
+                              let str = "";
+                              str = str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
+                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
+                              str = str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
+                              
+                              console.log(str);
+                              buttons[i-1].innerHTML = str;
+                              buttons[i-1].value = data["motors"][int_to_str(i)]["order"];
+                              console.log(buttons[i-1].innerHTML);
+                          }
+                              
+                      }
+
+                  }
+              });
+        };
+
+        $(".btn").on('click', function(e) {
+            console.log($(this).val());
+            console.log(typeof($(this).innerHTML));
+            //let inputText = $('input[type=text]').val();
+        /*
+            
+            $.ajax({
+                type: "POST",
+                url: "/apply",
+                data: inputText, // serializes the form's elements.
+                success: function(data) {
+                    // console.log("/Map/" + data);
+                    window.location.assign("/Map/" + data);
+                }
+            });
+
+        });
+            $("form").submit(function(e) {
+                e.preventDefault();
+                let ID = $("input[name=ID]").val();
+                let brand = $("input[name=brand]").val();
+                let color = $("input[name=color]").val();
+                let liClass = $("input[name=liClass]").val();
+                console.log(JSON.stringify({"ID": ID, "brand": brand, "color": color, "liClass": liClass}));
+
+                $.ajax({
+                    type: "POST",
+                    url: "/apply/license/create",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify({"ID": ID, "brand": brand, "color": color, "liClass": liClass}),
+                    success: function(data) {
+                        console.log(data);
+                        window.location.assign("/apply/license/success");
+                    }
+                });
+        */
+            })
+
+        function int_to_str(num) {
+            let firstNum = Math.floor(num / 100);
+            let secondNum = Math.floor((num - Math.floor(num / 100) * 100 - num % 10) / 10);
+            let thirdNum = num % 10;
+            return firstNum.toString().concat(secondNum.toString(), thirdNum.toString());
+        };
+    </script>
+
+</body>
+</html>

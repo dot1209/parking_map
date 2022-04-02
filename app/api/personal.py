@@ -9,9 +9,10 @@ def modify_personal_info(textInfo):
     base_path = pathlib.Path().resolve()
     data_path = os.path.join(base_path, "data")
 
-    objstr = textInfo.toJSON()
-    json.dump(json.loads(objstr), open(data_path + "/personal_info.json", "w"))     
-    
+    # objstr = textInfo.toJSON()
+    # json.dump(json.loads(objstr), open(data_path + "/personal_info.json", "w"))     
+    with open(data_path + "/personal_info.json", "w") as f:
+        f.write(textInfo.toJSON())
 
     return None
 

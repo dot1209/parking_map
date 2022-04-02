@@ -30,6 +30,17 @@
           font-size: 3.5rem;
         }
       }
+
+      .btn {
+        background-color: red; /* Green */
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
     </style>
 
     <!-- Custom styles for this template -->
@@ -69,15 +80,17 @@
             </ul>
         </nav>
 
-        <input type="button" 
-               value="序號: 073001 車牌號碼: ABC-1234 機車顏色: 白" 
-               class = "btn1" 
-               onclick="location.href='info'">
+        <!-- onclick link to info -->
+        <button type = "button" class = "btn" id = "1" onload = "load_json()"></button>
+        <button type = "button" class = "btn" id = "2" onload = "load_json()"></button>
+        <button type = "button" class = "btn" id = "3" onload = "load_json()"></button>
+        <button type = "button" class = "btn" id = "4" onload = "load_json()"></button>
+        <button type = "button" class = "btn" id = "5" onload = "load_json()"></button>
+        <button type = "button" class = "btn" id = "6" onload = "load_json()"></button>
 
         <input type="button" 
                value="+ 新增停車證" 
-               class = "btn2" 
-               onclick="location.href='create'">
+               onclick="location.href='create'" >
 
     </div>
 
@@ -96,6 +109,120 @@
             </nav>
         </div>
     </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+          window.onload = load_json;
+
+          function load_json() {
+              let target = $(this).attr('button');
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/license/button-data",
+                  data: target,
+                  success: function(data) {
+                      var buttons = [ document.getElementById("1"),
+                                      document.getElementById("2"),
+                                      document.getElementById("3"),
+                                      document.getElementById("4"),
+                                      document.getElementById("5"),
+                                      document.getElementById("6") ];
+                      let i;
+                      for(i = 1; i < 6; i++)
+                      {
+                          if(i > parseInt(data["counter"]))
+                          {
+                              buttons[i-1].innerHTML = "";
+                              buttons[i-1].value = "";
+                          }
+                          else
+                          {
+                              console.log(JSON.stringify(data));
+                              let str = "";
+                              str = str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
+                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
+                              str = str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
+                              buttons[i-1].innerHTML = str;
+                              buttons[i-1].value = data["motors"][int_to_str(i)]["order"];
+                              console.log(buttons[i-1].innerHTML);
+                          }
+                              
+                      }
+
+                  }
+              });
+        };
+
+        $(".btn").on('click', function(e) {
+            e.preventDefault();
+            console.log($(this).val());
+            console.log(typeof($(this).innerHTML));
+            //let inputText = $('input[type=text]').val();
+
+            let personal_id = "";
+            let car_id = "";
+            let car_brand = "";
+            let car_color = "";
+            let car_order = $(this).val();
+            let car_class = "";
+            let cost = "";
+            let isNew = "";
+            let isVerify = "";
+            let payAccount = "";
+            let dueDate = "";
+            let isValid = "";
+            let owner = "";
+            let updateDate = "";
+            let updateTime = "";
+            let updateIP = "";
+
+            $.ajax({
+                type: "POST",
+                url: "/apply/license/key-data",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({"personal_id": personal_id,
+                                      "car_id": car_id,
+                                      "car_brand": car_brand,
+                                      "car_color": car_color,
+                                      "car_order": car_order,
+                                      "car_class": car_class,
+                                      "cost": cost,
+                                      "isNew": isNew,
+                                      "isVerify": isVerify,
+                                      "payAccount": payAccount,
+                                      "dueDate": dueDate,
+                                      "isValid": isValid,
+                                      "owner": owner,
+                                      "updateDate": updateDate,
+                                      "updateTime": updateTime,
+                                      "updateIP": updateIP
+                                    }),
+                success: function(data) {
+                    window.location.assign("info");
+                }
+            });
+
+        });
+
+        function int_to_str(num) {
+            let firstNum = Math.floor(num / 100);
+            let secondNum = Math.floor((num - Math.floor(num / 100) * 100 - num % 10) / 10);
+            let thirdNum = num % 10;
+            return firstNum.toString().concat(secondNum.toString(), thirdNum.toString());
+        };
+    </script>
 
 </body>
 </html>
