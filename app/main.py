@@ -74,6 +74,10 @@ def read_apply_license_success():
 def read_apply_personal_personal():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "personal.html"))
 
+@app.get("/apply/personal/personal-data")
+def read_personal_info():
+    return personal.show_personal_info()
+
 @app.get("/apply/personal/modify")
 def read_apply_personal_modify():
     return FileResponse(os.path.join(base_path, "templates", "apply", "personal", "modify.html"))
@@ -109,6 +113,3 @@ def read_create(textContent: header.motorInfo):
     # print(textContent)
     return textContent
 
-@app.get("/apply/personal/personal")
-def read_personal_info():
-    return personal.show_personal_info()

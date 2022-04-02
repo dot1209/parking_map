@@ -75,27 +75,27 @@
         <br>
         學號
         <br>
-        A12345678
+        <div id = "ID" onload = "load_json()"></div>
         <br>
         <br>
         姓名
         <br>
-        王大明
+        <div id = "name" onload = "load_json()"></div>
         <br>
         <br>
         系所名稱
         <br>
-        資訊工程學系
+        <div id = "dep" onload = "load_json()"></div>
         <br>
         <br>
         連絡電話
         <br>
-        (06)5555487
+        <div id = "tel" onload = "load_json()"></div>
         <br>
         <br>
         E-mail
         <br>
-        nihaoma@gmail.com
+        <div id = "email" onload = "load_json()"></div>
         <br>
         <br>
         <br>
@@ -130,22 +130,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        $("form").submit(function(e) {
-            let inputText = $('input[type=text]').val();
-            $.ajax({
-                type: "GET",
-                url: "/apply/personal/personal",
-                dataType: "json", // serializes the form's elements.
-                success: function(data) {
-                    console.log("hi hi hi");
-                    $('#ID').html(data.ID);
-                },
-                error: function () {
-                    console.log("error");
-                }
-            });
-            e.preventDefault(); // avoid to execute the actual submit of the form.
-        });            
+          function load_json() {
+              let target = $(this).attr('div');
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/personal/personal-data",
+                  data: target,
+                  success: function(data) {
+                      console.log("hi hi hi");
+                      let ID = document.getElementById("ID")
+                      let name = document.getElementById("name");
+                      let dep = document.getElementById("dep");
+                      let tel = document.getElementById("tel");
+                      let email = document.getElementById("email");
+                      
+                      ID.innerHTML = data["ID"];
+                      name.innerHTML = data["name"];
+                      dep.innerHTML = data["dep"];
+                      tel.innerHTML = data["tel"];
+                      email.innerHTML = data["email"];
+                  }
+              });
+        };
     </script>
 
 </body>
