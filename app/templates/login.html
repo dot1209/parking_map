@@ -44,31 +44,46 @@
     </header>
 
     <!-- image -->
-    <img src="/assets/Group 39.png">
+    <div class="d-flex flex-column justify-content-center">
+        <div class="d-flex justify-content-center">
+            <img src="/assets/LOGO紅.png" class="logo-medium">
+        </div>
 
-    <form method = "get" action = "/apply/chart/chart" class = "login-form">
-        <!-- student id -->
-        <label>學號</label>
-        <input type = "text" name = "ID" placeholder = "請輸入學號">
+        <form action="">
+            <div class="d-flex flex-column">
+                <div class="m-3 d-flex justify-content-center">
+                    <!-- <label>學號</label> -->
+                    <input type = "text" name = "ID" placeholder = "請輸入學號"
+                           class="px-2 py-1 input-field border-brown">
+                </div>
+                
+                <div class="m-3 d-flex justify-content-center">
+                    <!-- <label>密碼</label> -->
+                    <input type = "password" name = "password" placeholder = "請輸入密碼"
+                           class="px-2 py-1 input-field border-brown">
+                </div>
+                
+                <!-- identification -->
+                <!-- <div class="m-3 d-flex justify-content-center"> -->
+                <div class="m-3 d-flex justify-content-center">
+                    <input type = "text" name = "verify" placeholder = "請輸入驗證碼"
+                            class="input-filed px-2 py-1 border-brown">
+                    <!-- <label>驗證碼</label> -->
+                    <img id = "VerifyCode" src = "/assets/verify_code/index1.png"
+                            class="px-2 valid-img">
+                </div>
+                <!-- </div> -->
+                
+                <div class="m-3 d-flex justify-content-center">
+                    <button type = "submit" class="btn btn-red shadow">
+                        登入
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-        <!-- password -->
-        <label>密碼</label>
-        <input type = "password" name = "password" placeholder = "請輸入密碼">
-
-        <!-- identification -->
-        <label>驗證碼</label>
-        <input type = "text" name = "verify" placeholder = "請輸入驗證碼">
-        <img id = "VerifyCode" src = "/assets/verify_code/index1.png">
-
-        <!-- login button -->
-        <!--
-        <input value = "登入" onclick = "location.href = '/apply/chart/chart'">
-        -->
-        <button type = "submit">
-            登入
-        </button>
-    </form>
-    <section>
+    <section class="pt-5">
         <div class="d-flex container-sm">
             <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
                 <a href="/Info">
@@ -99,7 +114,7 @@
             let ID = $("input[name=ID]").val();
             let password = $("input[name=password]").val();
             let verify = $("input[name=verify]").val();
-            console.log(JSON.stringify({"ID": ID, "password": password, "verify": verify}));
+            // console.log(JSON.stringify({"ID": ID, "password": password, "verify": verify}));
             $.ajax({
                 type: "POST",
                 url: "/login",
@@ -107,8 +122,8 @@
                 contentType: "application/json",
                 data: JSON.stringify({"ID": ID, "password": password, "verify": verify}), // serializes the form's elements.
                 success: function(data) {
-                    console.log(data);
-                    console.log("hi hi hi");
+                    // console.log(data);
+                    // console.log("hi hi hi");
                     window.location.assign("/apply/chart/chart");
                 }
             });
