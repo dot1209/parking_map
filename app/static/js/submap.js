@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // $('.map').maphilight();
+  $('.sub-map').maphilight();
   $('.sub-map').rwdImageMaps();
 });
 
