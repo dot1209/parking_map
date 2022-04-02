@@ -72,36 +72,27 @@
         <form action="" method="">
         <b>個人基本資料維護及修改</b>
         <br>
-        <br>
         學號
         <br>
         <div id = "ID" onload = "load_json()"></div>
-        <br>
         <br>
         姓名
         <br>
         <div id = "name" onload = "load_json()"></div>
         <br>
-        <br>
         系所名稱
         <br>
         <div id = "dep" onload = "load_json()"></div>
-        <br>
         <br>
         連絡電話
         <br>
         <div id = "tel" onload = "load_json()"></div>
         <br>
-        <br>
         E-mail
         <br>
         <div id = "email" onload = "load_json()"></div>
         <br>
-        <br>
-        <br>
         <input type = "button" value = "修改" onclick = "location.href = 'modify'">
-        <br>
-        <br>
         </form>
     </div>
 
@@ -130,6 +121,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
+          window.onload = load_json;
           function load_json() {
               let target = $(this).attr('div');
               $.ajax({
@@ -137,7 +129,6 @@
                   url: "/apply/personal/personal-data",
                   data: target,
                   success: function(data) {
-                      console.log("hi hi hi");
                       let ID = document.getElementById("ID")
                       let name = document.getElementById("name");
                       let dep = document.getElementById("dep");
