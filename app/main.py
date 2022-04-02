@@ -113,3 +113,45 @@ def read_create(textContent: header.motorInfo):
     # print(textContent)
     return textContent
 
+@app.get("/get-license")
+def get_detail_license():
+    return [
+        {
+            "order": 1,
+            "ID": 1,
+            "color": 1,
+            "date": 1,
+            "name": 1,
+
+        }, {
+            "order": 2,
+            "ID": 2,
+            "color": 2,
+            "date": 2,
+            "name": 2,
+        }
+    ]
+
+@app.get("/get-license/{id}")
+def get_detail_license(id: str):
+    data = [
+        {
+            "order": 1,
+            "ID": 1,
+            "color": 1,
+            "date": 1,
+            "name": 1,
+
+        }, {
+            "order": 2,
+            "ID": 2,
+            "color": 2,
+            "date": 2,
+            "name": 2,
+        }
+    ]
+    for d in data:
+        if d["ID"] == int(id):
+            return d
+    
+    return {"error": "invalid id"}
