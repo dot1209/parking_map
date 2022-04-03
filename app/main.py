@@ -63,8 +63,9 @@ def read_apply_button_data():
     return license.show_licenses()
 
 @app.post("/apply/license/key-data")
-def get_button_value(textContent: header.motorInfo):
-    return get_button_key(textContent)
+def read_get_button_value(textContent: header.detailInfo):
+    print(textContent.car_info)
+    return license.get_button_key(textContent)
 
 @app.get("/apply/license/info")
 def read_apply_license_info():

@@ -62,13 +62,12 @@ class motorInfos(BaseModel):
     motors: dict
 
     def __init__(self):
-        global counter
-        c = InttoStr(counter)
         motors = {}
-        super().__init__(counter = c, motors = motors)
+        super().__init__(counter = "000", motors = motors)
 
     # member function
     def create_dict(self, jsonstr):
+        global counter
         self.motors = {}
         license = {}
 
@@ -102,6 +101,7 @@ class motorInfos(BaseModel):
                             license["liClass"] = getStr(word)
                         tmp = ""
         self.counter = InttoStr(len(self.motors.keys()))
+        counter = len(self.motors.keys())
 
         return None
 
