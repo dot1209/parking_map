@@ -101,6 +101,7 @@ class motorInfos(BaseModel):
                         elif tmp == "liClass":
                             license["liClass"] = getStr(word)
                         tmp = ""
+        self.counter = InttoStr(len(self.motors.keys()))
 
         return None
 
@@ -127,6 +128,46 @@ class motorInfos(BaseModel):
             i1 += 1
         objstr += "}"
         return objstr
+
+# single license info in detail
+class detailInfo(BaseModel):
+    # member attribute
+    personal_id: str
+    car_id: str
+    car_brand: str
+    car_color: str
+    car_order: str
+    car_class: str
+    cost: str
+    isNew: str
+    isVerify: str
+    payAccount: str
+    dueDate: str
+    isValid: str
+    owner: str
+    updateDate: str
+    updateTime: str
+    updateIP: str
+
+    # member function
+    def __init__(self):
+        super().__init__(personal_id = "",
+                         car_id = "",
+                         car_brand = "",
+                         car_color = "",
+                         car_order = "",
+                         car_class = "",
+                         cost = "",
+                         isNew = "",
+                         isVerify = "",
+                         payAccount = "",
+                         dueDate = "",
+                         isValid = "",
+                         owner = "",
+                         updateDate = "",
+                         updateTime = "",
+                         updateIP = "")
+
 
 # license (motor's element) dictionary to json
 def motortoJSON(obj):

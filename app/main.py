@@ -58,6 +58,14 @@ def read_apply_chart_chart():
 def read_apply_license_license():
     return FileResponse(os.path.join(base_path, "templates", "apply", "license", "license.html"))
 
+@app.get("/apply/license/button-data")
+def read_apply_button_data():
+    return license.show_licenses()
+
+@app.post("/apply/license/key-data")
+def get_button_value(textContent: header.motorInfo):
+    return get_button_key(textContent)
+
 @app.get("/apply/license/info")
 def read_apply_license_info():
     return FileResponse(os.path.join(base_path, "templates", "apply", "license", "info.html"))
