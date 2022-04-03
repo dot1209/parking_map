@@ -63,18 +63,20 @@
     </header>
     <div>
 
-        <div class="row">
-            <div class="d-flex justify-content-center col-3 border-red">
-                <a class="else" href="../chart/chart">申請流程說明</a>
-            </div>
-            <div class="d-flex justify-content-center col-3 border-red">
-                <a class="else" href="../personal/personal">個人基本資料維護</a>
-            </div>
-            <div class="d-flex justify-content-center col-3 border-red">
-                <a class="else" href="../license/license">機車通行證申請資料</a>
-            </div>
-            <div class="d-flex justify-content-center col-3 selected border-red">
-                <a class="selected" href="../payment/payment">上傳出納繳交平台</a>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center col-3 border-red">
+                    <a class="else" href="../chart/chart">申請流程說明</a>
+                </div>
+                <div class="d-flex justify-content-center col-3 border-red">
+                    <a class="else" href="../personal/personal">個人基本資料維護</a>
+                </div>
+                <div class="d-flex justify-content-center col-3 border-red">
+                    <a class="else" href="../license/license">機車通行證申請資料</a>
+                </div>
+                <div class="d-flex justify-content-center col-3 selected border-red">
+                    <a class="selected" href="../payment/payment">上傳出納繳交平台</a>
+                </div>
             </div>
         </div>
     
@@ -82,60 +84,57 @@
         <div class="d-flex justify-content-center">
             <p id="subtitle" class="p-2 m-4">上傳出納繳交平台</p>
         </div>
-        <br>
-        <br>
-        Step 1    選擇需繳費停車證
-        <br>
+
+        <div class="brown-text m-3 d-flex justify-content-center">
+            Step 1 &nbsp&nbsp&nbsp&nbsp 選擇需繳費停車證
+        </div>
         <!-- onclick link to info -->
-        <button type = "button" class = "btn1" id = "1" onload = "load_json()">
-        </button>
-        <button type = "button" class = "btn1" id = "2" onload = "load_json()">
-        </button>
-        <button type = "button" class = "btn1" id = "3" onload = "load_json()">
-        </button>
-        <button type = "button" class = "btn1" id = "4" onload = "load_json()">
-        </button>
-        <button type = "button" class = "btn1" id = "5" onload = "load_json()">
-        </button>
-        <button type = "button" class = "btn1" id = "6" onload = "load_json()">
-        </button>
-        <br>
-        <br>
-        Step 2    點擊下方按鈕
-        <br>
-        <button type = "button" class = "btn2" onclick="step2()">
-               產生繳費帳號
-        </button>
-        <br>
-        <br>
-        Step 3    點擊下方按鈕
-        <br>
-        <button type = "button" class = "btn3" onclick="step2()">
-              產生出納繳費資料
-        </button>
-        <br>
-        <br>
-        Step 4    點擊下方按鈕
-        <br>
-        <button type = "button" class = "btn4" onclick="step2()">
-              下載繳費單
-        </button>
+        <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center align-content-center">
+                <button type="button" class="m-3 license shadow btn" id="1" onload="load_json()"></button>
+                <button type="button" class="m-3 license shadow btn" id="2" onload="load_json()"></button>
+                <button type="button" class="m-3 license shadow btn" id="3" onload="load_json()"></button>
+                <button type="button" class="m-3 license shadow btn" id="4" onload="load_json()"></button>
+                <button type="button" class="m-3 license shadow btn" id="5" onload="load_json()"></button>
+                <button type="button" class="m-3 license shadow btn" id="6" onload="load_json()"></button>
+            </div>
+        </div>
+
+
+        <div class="m-3 d-flex justify-content-center">
+            <div class="brown-text d-flex flex-column justify-content-center">
+                Step 2 &nbsp&nbsp&nbsp&nbsp 點擊下方按鈕
+                <button type = "button" class = "btn-red btn2" onclick="step2()">
+                       產生繳費帳號
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="m-3 d-flex justify-content-center">
+            <div class="brown-text d-flex flex-column justify-content-center">
+                Step 3 &nbsp&nbsp&nbsp&nbsp 點擊下方按鈕
+                <button type = "button" class = "btn-red btn3" onclick="step2()">
+                      產生出納繳費資料
+                </button>
+            </div>
+        </div>
+
+
+        <div class="m-3 d-flex justify-content-center">
+            <div class="brown-text d-flex flex-column justify-content-center">
+                Step 4 &nbsp&nbsp&nbsp&nbsp 點擊下方按鈕
+                <button type = "button" class = "btn-red btn4" onclick="step2()">
+                    下載繳費單
+                </button>
+            </div>
+        </div>
+        
 
 
     </div>
-    <script>
-        function step2() {
-          alert("已產生交費帳號!");
-        }
-        function step3() {
-          alert("已產生出納繳費資料!");
-        }
-        function step4() {
-          alert("已下載繳費單!");
-        }
-    </script>
 
-    <section>
+    <section class="p-footer">
         <div class="d-flex container-sm">
             <nav class="navbar footer fixed-bottom navbar-expand-lg justify-content-around">
                 <a href="/Info">
@@ -162,11 +161,22 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
             crossorigin="anonymous">
     </script>
-
+    
+    <script>
+        function step2() {
+          alert("已產生交費帳號!");
+        }
+        function step3() {
+          alert("已產生出納繳費資料!");
+        }
+        function step4() {
+          alert("已下載繳費單!");
+        }
+    </script>
     <script>
           window.onload = load_json;
 
-          function load_json() {
+              function load_json() {
               let target = $(this).attr('button');
               $.ajax({
                   type: "GET",
@@ -179,20 +189,22 @@
                                       document.getElementById("4"),
                                       document.getElementById("5"),
                                       document.getElementById("6") ];
-                      let i;
-                      for(i = 1; i < 6; i++)
+                      let totalData = parseInt(data["counter"]);
+                      if (totalData < 6) {
+                        buttons[5].style.display = "none";
+                      }
+                      for(let i = 1; i < 6; i++)
                       {
-                          if(i > parseInt(data["counter"]))
+                          if(i > totalData)
                           {
-                              buttons[i-1].innerHTML = "";
-                              buttons[i-1].value = "";
+                              buttons[i-1].style.display = "none";
                           }
                           else
                           {
                               console.log(JSON.stringify(data));
                               let str = "";
-                              str = str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
-                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
+                              str = str.concat("序號&nbsp&nbsp&nbsp&nbsp", data["motors"][int_to_str(i)]["order"], "<br />");
+                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "<br />");
                               str = str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
                               buttons[i-1].innerHTML = str;
                               buttons[i-1].value = data["motors"][int_to_str(i)]["order"];
