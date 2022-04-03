@@ -73,39 +73,38 @@
         <br>
         <br>
         <br>
-
         <section>
-            身分證字號: A123456789
+            身分證字號: <div id = "1" onload = "load_json()"></div>
             <br>
-            車牌號碼: ABC-1234
+            車牌號碼: <div id = "2" onload = "load_json()"></div>
             <br>
-            機車廠牌: 光陽
+            機車廠牌: <div id = "3" onload = "load_json()"></div>
             <br>
-            機車顏色: 白色
+            機車顏色: <div id = "4" onload = "load_json()"></div>
             <br>
-            序號: 01
+            序號: <div id = "5" onload = "load_json()"></div>
             <br>
-            通行證類: 22
+            通行證類: <div id = "6" onload = "load_json()"></div>
             <br>
-            收費金額: 300
+            收費金額: <div id = "7" onload = "load_json()"></div>
             <br>
-            新申請: 否
+            新申請: <div id = "8" onload = "load_json()"></div>
             <br>
-            軍訓室審核: 是
+            軍訓室審核: <div id = "9" onload = "load_json()"></div>
             <br>
-            台銀繳款帳號: 123456789098765
+            台銀繳款帳號: <div id = "10" onload = "load_json()"></div>
             <br>
-            繳款期限: 1101231
+            繳款期限: <div id = "11" onload = "load_json()"></div>
             <br>
-            有效: 有效
+            有效: <div id = "12" onload = "load_json()"></div>
             <br>
-            更新人: A123456789
+            更新人: <div id = "13" onload = "load_json()"></div>
             <br>
-            更新日期: 1100902
+            更新日期: <div id = "14" onload = "load_json()"></div>
             <br>
-            更新時間: 13:19:59
+            更新時間: <div id = "15" onload = "load_json()"></div>
             <br>
-            更新IP:140.116.32.41
+            更新IP: <div id = "16" onload = "load_json()"></div>
         </section>
         <br>
         <input type="button" value="返回" onclick="location.href='license'">
@@ -127,6 +126,49 @@
             </nav>
         </div>
     </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+          window.onload = load_json;
+          function load_json() {
+            console.log("fffffff");
+              let target = $(this).attr('div');
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/license/info-data",
+                  data: target,
+                  success: function(data) {
+                      let d = [ data["personal_id"],
+                                data["car_id"],
+                                data["car_brand"],
+                                data["car_color"],
+                                data["car_order"],
+                                data["car_class"],
+                                data["cost"],
+                                data["isNew"],
+                                data["isVerify"],
+                                data["payAccount"],
+                                data["dueDate"],
+                                data["isValid"],
+                                data["owner"],
+                                data["updateDate"],
+                                data["updateTime"],
+                                data["updateIP"] ];
+                      let i = 1;
+                      for(i = 1; i <= 16; i++)
+                      {
+                          let tmp = document.getElementById(i.toString());
+                          tmp.innerHTML = d[i-1]
+                      }
+                  }
+              });
+        };
+    </script>
 
 </body>
 </html>

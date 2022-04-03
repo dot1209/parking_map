@@ -150,6 +150,7 @@ class detailInfo(BaseModel):
     updateIP: str
 
     # member function
+    """ no constructor!!!
     def __init__(self):
         super().__init__(personal_id = "",
                          car_id = "",
@@ -167,7 +168,7 @@ class detailInfo(BaseModel):
                          updateDate = "",
                          updateTime = "",
                          updateIP = "")
-
+    """
 
 # license (motor's element) dictionary to json
 def motortoJSON(obj):

@@ -150,9 +150,9 @@
                           {
                               console.log(JSON.stringify(data));
                               let str = "";
-                              str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
-                              str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
-                              str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
+                              str = str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
+                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
+                              str = str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
                               buttons[i-1].innerHTML = str;
                               buttons[i-1].value = data["motors"][int_to_str(i)]["order"];
                               console.log(buttons[i-1].innerHTML);
@@ -165,58 +165,56 @@
         };
 
         $(".btn").on('click', function(e) {
+            e.preventDefault();
             console.log($(this).val());
             console.log(typeof($(this).innerHTML));
             //let inputText = $('input[type=text]').val();
+
+            let personal_id = "";
+            let car_id = "";
+            let car_brand = "";
+            let car_color = "";
+            let car_order = $(this).val();
+            let car_class = "";
+            let cost = "";
+            let isNew = "";
+            let isVerify = "";
+            let payAccount = "";
+            let dueDate = "";
+            let isValid = "";
+            let owner = "";
+            let updateDate = "";
+            let updateTime = "";
+            let updateIP = "";
+
             $.ajax({
                 type: "POST",
                 url: "/apply/license/key-data",
                 dataType: "json",
                 contentType: "application/json",
-                data: JSON.stringify({"personal_id": "",
-                                      "car_id": "",
-                                      "car_brand": "",
-                                      "car_color": "",
-                                      "car_order": $(this).val(),
-                                      "car_class": "",
-                                      "cost": "",
-                                      "isNew": "",
-                                      "isVerify": "",
-                                      "payAccount": "",
-                                      "dueDate": "",
-                                      "isValid": "",
-                                      "owner": "",
-                                      "updateDate": "",
-                                      "updateTime": "",
-                                      "updateIP": ""
+                data: JSON.stringify({"personal_id": personal_id,
+                                      "car_id": car_id,
+                                      "car_brand": car_brand,
+                                      "car_color": car_color,
+                                      "car_order": car_order,
+                                      "car_class": car_class,
+                                      "cost": cost,
+                                      "isNew": isNew,
+                                      "isVerify": isVerify,
+                                      "payAccount": payAccount,
+                                      "dueDate": dueDate,
+                                      "isValid": isValid,
+                                      "owner": owner,
+                                      "updateDate": updateDate,
+                                      "updateTime": updateTime,
+                                      "updateIP": updateIP
                                     }),
                 success: function(data) {
-                    window.location.assign("apply/license/info");
+                    window.location.assign("info");
                 }
             });
 
         });
-        /*
-            $("form").submit(function(e) {
-                e.preventDefault();
-                let ID = $("input[name=ID]").val();
-                let brand = $("input[name=brand]").val();
-                let color = $("input[name=color]").val();
-                let liClass = $("input[name=liClass]").val();
-                console.log(JSON.stringify({"ID": ID, "brand": brand, "color": color, "liClass": liClass}));
-
-                $.ajax({
-                    type: "POST",
-                    url: "/apply/license/create",
-                    dataType: "json",
-                    contentType: "application/json",
-                    data: JSON.stringify({"ID": ID, "brand": brand, "color": color, "liClass": liClass}),
-                    success: function(data) {
-                        console.log(data);
-                        window.location.assign("/apply/license/success");
-                    }
-                });
-        */
 
         function int_to_str(num) {
             let firstNum = Math.floor(num / 100);
