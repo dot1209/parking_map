@@ -132,7 +132,7 @@ a.else {
     max-height: 130px;
     border-top: 2px solid #90693E;
     border-radius: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 56px;
     background-color: #fff;
     z-index: 2;
 }
@@ -142,7 +142,7 @@ a.else {
 }
 
 .info-field {
-    padding-bottom: 48px;
+    /* padding-bottom: 48px; */
     margin: 32px;
 }
 
