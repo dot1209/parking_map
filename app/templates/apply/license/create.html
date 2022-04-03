@@ -78,21 +78,39 @@
     </div>
 
     <form action = "get" method = "success" class = "license-form">
-        <label form = "name">車牌號碼</label>
-        <input type = "text" name = "ID" placeholder = "請輸入車牌號碼">
-        <label form = "name">機車廠牌</label>
-        <input type = "text" name = "brand" placeholder = "請輸入機車廠牌">
-        <label form = "text">機車顏色</label>
-        <input type = "text" name = "color" placeholder = "請輸入機車顏色">
-        <label form = "name">通行證類別</label>
-        <input list="browsers" name = "liClass">
-        <datalist id="browsers">
-            <option value="學生機車地下停車證">
-            <option value="學生大型重機地下停車證">
-        </datalist>
-        <button type = "submit">
-            申請
-        </button>
+        <div class="my-3 d-flex justify-content-center">
+            <div class="d-flex flex-column">
+                <label form = "name">車牌號碼</label>
+                <input class="my-2" type = "text" name = "ID" placeholder = "請輸入車牌號碼">
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-center">
+            <div class="d-flex flex-column">
+                <label form = "name">機車廠牌</label>
+                <input class="my-2"  type = "text" name = "brand" placeholder = "請輸入機車廠牌">
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-center">
+            <div class="d-flex flex-column">
+                <label form = "text">機車顏色</label>
+                <input class="my-2"  type = "text" name = "color" placeholder = "請輸入機車顏色">
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-center">
+            <div class="d-flex flex-column">
+                <label form = "name">通行證類別</label>
+                <input class="my-2"  list="browsers" name = "liClass">
+                <datalist id="browsers">
+                    <option value="學生機車地下停車證">
+                    <option value="學生大型重機地下停車證">
+                </datalist>
+            </div>
+        </div>
+        <div class="my-3 d-flex justify-content-center">
+            <button class="btn-red" type = "submit">
+                申請
+            </button>
+        </div>
     </form>
     <br>
     <br>

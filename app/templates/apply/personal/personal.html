@@ -74,30 +74,53 @@
             <p id="subtitle" class="p-2 m-4">個人基本資料維護及修改</p>
         </div>
 
-        <form action="" method="">
-        <br>
-        學號
-        <br>
-        <div id = "ID" onload = "load_json()"></div>
-        <br>
-        姓名
-        <br>
-        <div id = "name" onload = "load_json()"></div>
-        <br>
-        系所名稱
-        <br>
-        <div id = "dep" onload = "load_json()"></div>
-        <br>
-        連絡電話
-        <br>
-        <div id = "tel" onload = "load_json()"></div>
-        <br>
-        E-mail
-        <br>
-        <div id = "email" onload = "load_json()"></div>
-        <br>
-        <input type = "button" value = "修改" onclick = "location.href = 'modify'">
-        </form>
+        <div>
+            <form action="" method="">
+                <div class="m-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column sjustify-content-center">
+                        <div class="font-20 brown-text">學號</div>
+                        <div class="d-flex justify-content-center">
+                            <div id = "ID" onload = "load_json()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="font-20 brown-text">姓名</div>
+                        <div class="d-flex justify-content-center">
+                            <div id = "name" onload = "load_json()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="font-20 brown-text">系所名稱</div>
+                        <div class="d-flex justify-content-center">
+                            <div id = "dep" onload = "load_json()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="font-20 brown-text">連絡電話</div>
+                        <div class="d-flex justify-content-center">
+                            <div id = "tel" onload = "load_json()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="font-20 brown-text">E-mail</div>
+                        <div class="d-flex justify-content-center">
+                            <div id = "email" onload = "load_json()"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input class="btn-red" type = "button" value = "修改" onclick = "location.href = 'modify'">
+                </div>
+            </form>
+        </div>
     </div>
 
     <div>
