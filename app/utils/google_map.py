@@ -72,7 +72,7 @@ def crawl_building():
                         print(f"{building} -> {parking_name}: {info}")   
                         pbar.update(1)
 
-                        with open(os.path.join(data_path, "building_distance2.json"), "w", encoding="utf8") as f:
+                        with open(os.path.join(data_path, "building_distance.json"), "w", encoding="utf8") as f:
                             json.dump(distance_log, f, ensure_ascii=False, indent=4)
 def crawl_parking():
     with open(os.path.join(data_path, "parking_distance.json"), "r", encoding="utf-8") as f:
@@ -127,7 +127,7 @@ def crawl_parking():
                         print(f"{parking_name} -> {building}: {info}")   
                         pbar.update(1)
 
-                        with open(os.path.join(data_path, "parking_distance2.json"), "w", encoding="utf8") as f:
+                        with open(os.path.join(data_path, "parking_distance.json"), "w", encoding="utf8") as f:
                             json.dump(distance_log, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
