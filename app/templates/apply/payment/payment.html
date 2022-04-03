@@ -175,6 +175,19 @@
     </script>
     <script>
           window.onload = load_json;
+          window.onbeforeunload = function(){
+            // set backend key to null, if not download
+            $.ajax({
+                type: "POST",
+                url: "/apply/payment/set-null",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({"key": ""}),
+                success: function(data) {
+                    ;
+                }
+            });
+          };
 
               function load_json() {
               let target = $(this).attr('button');
@@ -223,17 +236,46 @@
             let thirdNum = num % 10;
             return firstNum.toString().concat(secondNum.toString(), thirdNum.toString());
         };
-/*
-        $(".btn").on('click', function(e) {
+
+        $(".btn1").on('click', function(e) {
             // change color
-            let i = 1
+            let i = 1;
+            let selected = $(this).prop('id');
+            console.log(selected);
             for(i = 1; i <= 6; i++)
             {
-                
+                if(i == parseInt(selected))
+                    document.getElementById(selected).style.background='#ffffff';
+                else
+                    document.getElementById(i.toString()).style.background='#ff0000';
             }
             // signal backend
+            console.log(int_to_str(parseInt(selected)));
+            $.ajax({
+                type: "POST",
+                url: "/apply/payment/key-data",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({"key": int_to_str(parseInt(selected))}),
+                success: function(data) {
+                    ;
+                }
+            });
         });
-*/
+
+        $(".btn4").on('click', function(e) {
+            $.ajax({
+                type: "POST",
+                url: "/apply/payment/set-show",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({"key": ""}),
+                success: function(data) {
+                    ;
+                }
+            });
+        });
+
     </script>
 
 </body>
