@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 
-from api import distance, zone, login, personal, license
+from api import distance, zone, login, personal, license, payment
 
 app = FastAPI()
 
@@ -101,6 +101,18 @@ def read_apply_personal_success():
 @app.get("/apply/payment/payment")
 def read_apply_payment_payment():
     return FileResponse(os.path.join(base_path, "templates", "apply", "payment", "payment.html"))
+
+@app.post("/apply/payment/key-data")
+def read_apply_payment_key_data(keyObj: header.keyInfo):
+    return payment.select_license(keyObj)
+
+@app.post("/apply/payment/set-show")
+def read_apply_payment_set_show(keyObj: header.keyInfo):
+    return payment.set_show_license()
+
+@app.post("/apply/payment/set-null")
+def read_apply_payment_set_null(keyObj: header.keyInfo):
+    return payment.set_null()
 
 @app.get("/distance/{target_name}")
 def read_buildings(target_name: str):

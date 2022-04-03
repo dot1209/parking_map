@@ -5,6 +5,67 @@ import json
 license_num = 0
 # total license num(single-user used)
 counter = 0
+# pay data in license
+pay_data = { "001": {"cost": "300",
+                     "isNew": "否",
+                     "isVerify": "是",
+                     "payAccount": "23456789",
+                     "dueDate": "1100924",
+                     "isValid": "是",
+                     "updateDate": "1100131",
+                     "updateTime": "13:19:59",
+                     "updateIP": "140.116.32.41",
+                     "show": "f"},
+             "002": {"cost": "450",
+                     "isNew": "是",
+                     "isVerify": "是",
+                     "payAccount": "45924853",
+                     "dueDate": "1110615",
+                     "isValid": "是",
+                     "updateDate": "1110223",
+                     "updateTime": "11:09:08",
+                     "updateIP": "140.116.49.52",
+                     "show": "f"},
+             "003": {"cost": "300",
+                     "isNew": "是",
+                     "isVerify": "否",
+                     "payAccount": "04835636",
+                     "dueDate": "1110306",
+                     "isValid": "是",
+                     "updateDate": "1101217",
+                     "updateTime": "22:10:45",
+                     "updateIP": "140.112.36.87",
+                     "show": "f"},
+             "004": {"cost": "200",
+                     "isNew": "是",
+                     "isVerify": "是",
+                     "payAccount": "49673956",
+                     "dueDate": "1101105",
+                     "isValid": "否",
+                     "updateDate": "1100427",
+                     "updateTime": "19:03:45",
+                     "updateIP": "140.116.45.32",
+                     "show": "f"},
+             "005": {"cost": "200",
+                     "isNew": "否",
+                     "isVerify": "否",
+                     "payAccount": "01406493",
+                     "dueDate": "1110411",
+                     "isValid": "是",
+                     "updateDate": "1101129",
+                     "updateTime": "20:07:16",
+                     "updateIP": "140.116.23.75",
+                     "show": "f"},
+             "006": {"cost": "300",
+                     "isNew": "是",
+                     "isVerify": "否",
+                     "payAccount": "49284693",
+                     "dueDate": "1111022",
+                     "isValid": "是",
+                     "updateDate": "1101231",
+                     "updateTime": "21:15:34",
+                     "updateIP": "140.116.24.86",
+                     "show": "f"} }
 
 # login data
 class Info(BaseModel):
@@ -12,6 +73,11 @@ class Info(BaseModel):
     ID: str
     password: str
     verify: str
+
+# send key value
+class keyInfo(BaseModel):
+    # member attribute
+    key: str
 
 # personal data
 class personInfo(BaseModel):
