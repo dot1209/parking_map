@@ -54,9 +54,13 @@ a.title {
 }
 
 .p-footer {
-    padding-top: 72px;
+    padding-top: 54px;
 }
 /* bottom navbar */
+
+.p-0 {
+    padding: 0px;
+}
 
 .map {
     width: 84.6%;
@@ -291,6 +295,21 @@ a.title {
 }
 /* icon */
 
+div.selected {
+    background-color: #B30030;
+    color: #fff;
+}
+
+a.selected {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.else {
+    color: #90693E;
+    text-decoration: none;
+}
+
 #subtitle {
     border: 1px solid #B30030;
     color: #B30030;
@@ -303,7 +322,7 @@ a.title {
     max-height: 130px;
     border-top: 2px solid #90693E;
     border-radius: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 56px;
     background-color: #fff;
     z-index: 2;
 }
@@ -313,7 +332,7 @@ a.title {
 }
 
 .info-field {
-    padding-bottom: 48px;
+    /* padding-bottom: 48px; */
     margin: 32px;
 }
 
@@ -343,6 +362,10 @@ a.title {
 .border-brown {
     border: 1px solid #90693E;
     border-radius: 30px;
+}
+
+.border-red {
+    border: 3px solid #B30030;
 }
 
 .search-icon {
