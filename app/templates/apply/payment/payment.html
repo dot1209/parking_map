@@ -30,6 +30,17 @@
           font-size: 3.5rem;
         }
       }
+
+      .btn1 {
+        background-color: red; /* Green */
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
     </style>
 
     <!-- Custom styles for this template -->
@@ -74,33 +85,40 @@
         <br>
         Step 1    選擇需繳費停車證
         <br>
-        <input type="button" 
-               value="序號: 073001 車牌號碼: ABC-1234 機車顏色: 白" 
-               class = "btn1">
+        <!-- onclick link to info -->
+        <button type = "button" class = "btn1" id = "1" onload = "load_json()">
+        </button>
+        <button type = "button" class = "btn1" id = "2" onload = "load_json()">
+        </button>
+        <button type = "button" class = "btn1" id = "3" onload = "load_json()">
+        </button>
+        <button type = "button" class = "btn1" id = "4" onload = "load_json()">
+        </button>
+        <button type = "button" class = "btn1" id = "5" onload = "load_json()">
+        </button>
+        <button type = "button" class = "btn1" id = "6" onload = "load_json()">
+        </button>
         <br>
         <br>
         Step 2    點擊下方按鈕
         <br>
-        <input type="button" 
-               value="產生繳費帳號" 
-               class = "btn2" 
-               onclick="step2()">
+        <button type = "button" class = "btn2" onclick="step2()">
+               產生繳費帳號
+        </button>
         <br>
         <br>
         Step 3    點擊下方按鈕
         <br>
-        <input type="button" 
-               value="產生出納繳費資料" 
-               class = "btn3" 
-               onclick="step3()">
+        <button type = "button" class = "btn3" onclick="step2()">
+              產生出納繳費資料
+        </button>
         <br>
         <br>
         Step 4    點擊下方按鈕
         <br>
-        <input type="button" 
-               value="下載繳費單" 
-               class = "btn4" 
-               onclick="step4()">
+        <button type = "button" class = "btn4" onclick="step2()">
+              下載繳費單
+        </button>
 
 
     </div>
@@ -131,6 +149,79 @@
             </nav>
         </div>
     </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+          window.onload = load_json;
+
+          function load_json() {
+              let target = $(this).attr('button');
+              $.ajax({
+                  type: "GET",
+                  url: "/apply/license/button-data",
+                  data: target,
+                  success: function(data) {
+                      var buttons = [ document.getElementById("1"),
+                                      document.getElementById("2"),
+                                      document.getElementById("3"),
+                                      document.getElementById("4"),
+                                      document.getElementById("5"),
+                                      document.getElementById("6") ];
+                      let i;
+                      for(i = 1; i < 6; i++)
+                      {
+                          if(i > parseInt(data["counter"]))
+                          {
+                              buttons[i-1].innerHTML = "";
+                              buttons[i-1].value = "";
+                          }
+                          else
+                          {
+                              console.log(JSON.stringify(data));
+                              let str = "";
+                              str = str.concat("序號      ", data["motors"][int_to_str(i)]["order"], "\n");
+                              str = str.concat("車牌號碼  ", data["motors"][int_to_str(i)]["ID"], "\n");
+                              str = str.concat("機車顏色  ", data["motors"][int_to_str(i)]["color"]);
+                              buttons[i-1].innerHTML = str;
+                              buttons[i-1].value = data["motors"][int_to_str(i)]["order"];
+                              console.log(buttons[i-1].innerHTML);
+                          }
+                              
+                      }
+
+                  }
+              });
+        };
+
+        function int_to_str(num) {
+            let firstNum = Math.floor(num / 100);
+            let secondNum = Math.floor((num - Math.floor(num / 100) * 100 - num % 10) / 10);
+            let thirdNum = num % 10;
+            return firstNum.toString().concat(secondNum.toString(), thirdNum.toString());
+        };
+/*
+        $(".btn").on('click', function(e) {
+            // change color
+            let i = 1
+            for(i = 1; i <= 6; i++)
+            {
+                
+            }
+            // signal backend
+        });
+*/
+    </script>
 
 </body>
 </html>
