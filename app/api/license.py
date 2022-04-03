@@ -11,14 +11,14 @@ def add_license(objInfo: header.motorInfo):
     data_path = os.path.join(base_path, "data")
 
     objstr = ""
-    with open(data_path + "/license_info.json", "r") as f:
+    with open(data_path + "/license_info.json", "r", encoding="utf-8") as f:
         objstr = f.read()
         f.close()
     motor_obj = header.motorInfos()
     motor_obj.create_dict(objstr)
     new_license = header.motorObjtoDict(objInfo)
     motor_obj.motors[new_license["order"]] = new_license
-    with open(data_path + "/license_info.json", "w") as f:
+    with open(data_path + "/license_info.json", "w", encoding="utf-8") as f:
         f.write(motor_obj.dicttoJSON())
         f.close()
 
@@ -33,7 +33,7 @@ def show_licenses():
 
     objstr = ""
     motor_obj = header.motorInfos()
-    with open(data_path + "/license_info.json", "r") as f:
+    with open(data_path + "/license_info.json", "r", encoding="utf-8") as f:
         objstr = f.read()
         f.close()
     motor_obj.create_dict(objstr)
@@ -65,7 +65,7 @@ def show_license():
     """
     
     motor_obj = header.motorInfos()
-    with open(data_path + "/license_info.json", "r") as f:
+    with open(data_path + "/license_info.json", "r", encoding="utf-8") as f:
         objstr = f.read()
         f.close()
 
