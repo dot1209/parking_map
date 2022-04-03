@@ -12,5 +12,12 @@
 		"brand": "samm",
 		"color": "blue",
 		"liClass": "學生機車地下停車證"
+	},
+	"002": {
+		"order": "002",
+		"ID": "",
+		"brand": "",
+		"color": "",
+		"liClass": ""
 	}
 }
