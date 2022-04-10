@@ -91,12 +91,12 @@
         <!-- onclick link to info -->
         <div class="d-flex justify-content-center">
             <div class="d-flex flex-column justify-content-center align-content-center">
-                <button type="button" class="m-3 license shadow btn" id="1" onload="load_json()"></button>
-                <button type="button" class="m-3 license shadow btn" id="2" onload="load_json()"></button>
-                <button type="button" class="m-3 license shadow btn" id="3" onload="load_json()"></button>
-                <button type="button" class="m-3 license shadow btn" id="4" onload="load_json()"></button>
-                <button type="button" class="m-3 license shadow btn" id="5" onload="load_json()"></button>
-                <button type="button" class="m-3 license shadow btn" id="6" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="1" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="2" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="3" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="4" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="5" onload="load_json()"></button>
+                <button type="button" class="btn1 m-3 license shadow btn" id="6" onload="load_json()"></button>
             </div>
         </div>
 
@@ -244,10 +244,13 @@
             console.log(selected);
             for(i = 1; i <= 6; i++)
             {
-                if(i == parseInt(selected))
-                    document.getElementById(selected).style.background='#ffffff';
-                else
+                if(i == parseInt(selected)) {
+                    // document.getElementById(selected).style.background='#ffffff';
+                    // document.getElementById(selected).style.color='#000000';
                     document.getElementById(i.toString()).style.background='#ff0000';
+                }
+                else
+                    document.getElementById(i.toString()).style.background='#B30030';
             }
             // signal backend
             console.log(int_to_str(parseInt(selected)));
